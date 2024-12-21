@@ -181,6 +181,20 @@ nav {
 
     .menu-container {
         flex-grow: 2;
+
+        a {
+            svg path {
+                fill: #D0CED2;
+            }
+        }
+
+        a.active {
+            color: #7E37ED;
+
+            svg path {
+                fill: #7E37ED;
+            }
+        }
     }
 }
 
@@ -292,6 +306,7 @@ nav {
 
     background-color: var(--light-color);
     box-shadow: 0 15px 30px rgba(97, 3, 220, 0.05);
+    transition: 0.4s;
 
     &:hover {
         box-shadow: 0 15px 30px rgba(75, 239, 157, 0.2);
@@ -495,6 +510,7 @@ nav {
         height: 40px;
         max-width: 300px;
         background-color: #F6F3F9;
+        flex: 1 0 0 !important;
 
         input {
             background-color: transparent;
@@ -510,7 +526,10 @@ nav {
 /* FAQ */
 .faq-section {
     margin-top: 70px;
-    h2{
+    border-top: 2px solid #E4E1E7;
+
+    h2 {
+        padding-top: 70px;
         font-size: 20px;
         margin-bottom: 27px;
     }
@@ -521,7 +540,7 @@ nav {
     height: 310px;
     flex-shrink: 0;
     background: linear-gradient(0deg, rgba(64, 52, 88, 1) 0%, rgba(51, 37, 70, 1) 100%);
-    
+
 }
 
 
@@ -552,6 +571,7 @@ nav {
 
 .faq-card {
     margin-bottom: 10px;
+
     &:has(:checked) {
 
         .faq-title {
@@ -577,20 +597,173 @@ nav {
 
 
 
-footer{
+footer {
     margin-top: 70px;
-    >div{
-        padding:0 82px;
+
+    >div {
+        padding: 0 82px;
         height: 120px;
     }
-    .menu-container a{
+
+    .menu-container a {
         font-size: 12px;
         color: #fff;
-        svg path{
+
+        svg path {
             fill: #977559
         }
     }
-    .social{
+
+    .social {
         gap: 30px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+   body{
+    padding-bottom: 17px;
+   }
+    header {
+        z-index: 9
+    }
+
+    header .menu-container {
+        transition: 0.5s;
+        width: 250px;
+        position: absolute;
+
+        right: -100%;
+        top: 0;
+        height: 100svh;
+        z-index: 99;
+        background-color: #FEFDFF;
+        padding: 30px 15px;
+        transition: 1s;
+
+        ul li {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 24px;
+        }
+
+        /* display: none; */
+    }
+
+    body:has(#menu-toggler:checked) {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &::before {
+            transition: 0.4s;
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #3E3255;
+            opacity: 50%;
+            z-index: 10;
+        }
+
+        header {
+            z-index: 11;
+        }
+
+        header .menu-container {
+            right: 0;
+            transition: 1s;
+            /* display: none; */
+        }
+    }
+
+    .logo-container {
+        text-align: center
+    }
+
+    .toggler {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #F4F1F8;
+    }
+
+    .introSlide {
+        padding: 20px;
+        padding-bottom: 30px;
+        gap: 42px;
+
+        .top-circle {
+            width: 477px;
+            left: 0px;
+            top: 100px !important;
+        }
+
+        .bottom-circle {
+            left: 30px;
+            width: 230px;
+        }
+    }
+
+    .data-card-container {
+        width: 100%;
+        max-width: 100%;
+
+        .data-card_content ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card-item {
+            width: 50%;
+
+            &:nth-last-child(2) {
+                width: 100%;
+            }
+        }
+    }
+
+    .information {
+        gap: 20px !important;
+    }
+
+    .invoice-pay {
+        >* {
+            max-width: 100%;
+            width: 100%;
+            flex: 1 0 0 !important;
+
+            input {
+                background-color: transparent;
+            }
+        }
+
+        button {
+            width: fit-content
+        }
+    }
+    .faq-section h2{
+        text-align: center
+    }
+    footer{
+        >div{
+            padding: 30px 20px;
+            height: fit-content;
+            nav{
+                padding: 0 !important;
+                .menu-container{
+                    padding: 15px 0;
+                   
+                    li{
+                        padding: 9px 0;
+                        width: 50%;
+                    } 
+                }
+            }
+        }
     }
 }
