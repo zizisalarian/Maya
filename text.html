@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* تنظیم ستون‌ها به صورت خودکار */
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px; /* محدود کردن حداکثر عرض */
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #5a5afc;
+      margin: 10px 0;
+    }
+
+    .card .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .card ul li {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .card button {
+      background: #5a5afc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .card button:hover {
+      background: #3a3ad1;
+    }
+  </style>
+</head>
+<body>
+  <div class="cards-container">
+    <div class="card">
+      <div class="price">199 تومان</div>
+      <div class="title">طلایی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">129 تومان</div>
+      <div class="title">نقره‌ای</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">69 تومان</div>
+      <div class="title">برنزی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+    <div class="card">
+      <div class="price">49 تومان</div>
+      <div class="title">اقتصادی</div>
+      <ul>
+        <li>لیست کشورها</li>
+        <li>دسترسی 24 ساعته</li>
+        <li>سرعت بالا</li>
+      </ul>
+      <button>انتخاب پلن</button>
+    </div>
+  </div>
+</body>
+</html>
