@@ -431,7 +431,6 @@ nav {
         border-top: 6px solid var(--main-color);
         position: absolute;
         top: 100%;
-        /* position: absolute; */
     }
 }
 
