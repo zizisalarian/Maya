@@ -170,7 +170,7 @@ textarea.input-custom{
 body {
     font-family: var(--main-font);
     padding-bottom: 45px;
-
+color: var(--main-color)
 }
 
 nav {
