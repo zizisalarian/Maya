@@ -228,7 +228,7 @@
                     </a>
                 </li>
                 <li class="position-relative">
-                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                    <a href="/buy.html" class=" d-flex justify-content-start align-items-center">
                         <span class="position-absolute d-flex justify-content-center align-items-center">
                             <svg id="bag-2" xmlns="http://www.w3.org/2000/svg" width="16.445" height="16.446"
                                 viewBox="0 0 16.445 16.446">
@@ -733,22 +733,20 @@
         </div>
     </section>
 
-    <script src="./assets/lib/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    
 
-    <script>
 
-        let tooltipIcon = document.querySelectorAll('.tooltip-icon')
-        tooltipIcon.forEach(icn => {
-            console.log(icn);
-            if (icn.querySelector('.tooltip-content.tooltip-card span')) {
-                icn.querySelector('.tooltip-content.tooltip-card span.triangle').style.right = icn.parentElement.getBoundingClientRect().right - icn.getBoundingClientRect().right + 16 + 'px'
-            }
-            if (icn.querySelector('.tooltip-content.tooltip-countries span')) {
-                icn.querySelector('.tooltip-content.tooltip-countries span.triangle').style.right = icn.parentElement.getBoundingClientRect().right - icn.getBoundingClientRect().right + 25 + 'px'
-            }
-        })
-    </script>
+<script>
+    let windowURL = window.location.href
 
+    let links = document.querySelectorAll('.dashboard-ul a')
+    links.forEach(link=>{
+        link.classList.remove('active')
+        if(windowURL.includes(link.getAttribute('href'))){
+            link.classList.add('active')
+        }
+    })
+</script>
 </body>
 
 </html>
