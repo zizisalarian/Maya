@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/lib/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./dashboard-main.css">
+    <link rel="stylesheet" href="./dashboard-tutorial.css">
+    <title>Maya - Dashboard Tutorial</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="d-flex justify-content-between align-items-center py-32">
+            <div class="d-block d-md-none">
+                <label for="menu-toggler" class="toggler d-flex justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.382" height="11.476" viewBox="0 0 13.382 11.476">
+                        <path id="Union_88" data-name="Union 88"
+                            d="M.642,11.476A.745.745,0,0,1,.642,10H5.78a.745.745,0,0,1,0,1.476Zm0-5A.7.7,0,0,1,0,5.736.7.7,0,0,1,.642,5h12.1a.7.7,0,0,1,.642.737.7.7,0,0,1-.642.74Zm6.962-5A.7.7,0,0,1,6.961.737.7.7,0,0,1,7.6,0H12.74a.7.7,0,0,1,.642.737.7.7,0,0,1-.642.738Z"
+                            fill="#332546" />
+                    </svg>
+
+                    <input class="d-none" type="checkbox" id="menu-toggler">
+                </label>
+            </div>
+            <div class="logo-container">
+                <a href="/"><img src="./assets/image/logo.png" alt=""></a>
+            </div>
+            <div class="menu-container d-none d-md-block">
+                <ul class="p-0 d-flex flex-wrap justify-content-between align-items-center">
+
+                    <li>
+                        <a href="#"
+                            class="active fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                                viewBox="0 0 15.196 15.196">
+                                <g id="home" transform="translate(0 0)">
+                                    <path id="Vector"
+                                        d="M12.03,3.805,7.883.488A2.384,2.384,0,0,0,5,.481L.855,3.805A2.48,2.48,0,0,0,.025,5.977l.8,4.774a2.353,2.353,0,0,0,2.26,1.912H9.8a2.389,2.389,0,0,0,2.267-1.919l.8-4.774A2.544,2.544,0,0,0,12.03,3.805ZM6.914,10.131a.475.475,0,1,1-.95,0v-1.9a.475.475,0,0,1,.95,0Z"
+                                        transform="translate(1.159 1.266)" fill="#d0ced2" />
+                                    <path id="Vector-2" data-name="Vector" d="M0,0H15.2V15.2H0Z"
+                                        transform="translate(15.196 15.196) rotate(180)" fill="none" opacity="0" />
+                                </g>
+                            </svg>
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                                viewBox="0 0 15.196 15.196">
+                                <g id="bag-2" transform="translate(0 0)">
+                                    <path id="Vector"
+                                        d="M10.64,4.408a2.929,2.929,0,0,0-1.95-.836V3.091A3.1,3.1,0,0,0,5.3.014,3.259,3.259,0,0,0,2.51,3.205v.367a2.929,2.929,0,0,0-1.95.836A2.784,2.784,0,0,0,.034,6.637l.443,3.527c.133,1.235.633,2.5,3.356,2.5H7.366c2.723,0,3.223-1.266,3.356-2.495l.443-3.539A2.8,2.8,0,0,0,10.64,4.408ZM5.384.894a2.207,2.207,0,0,1,2.425,2.2v.443H3.39V3.205A2.381,2.381,0,0,1,5.384.894ZM3.333,7.061H3.326a.636.636,0,1,1,.006,0Zm4.432,0H7.759a.636.636,0,1,1,.006,0Z"
+                                        transform="translate(1.999 1.265)" fill="#7e37ed" />
+                                    <path id="Vector-2" data-name="Vector" d="M0,0H15.2V15.2H0Z"
+                                        transform="translate(15.196 15.196) rotate(180)" fill="none" opacity="0" />
+                                </g>
+                            </svg>
+                            فروشگاه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg id="book-square" xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                                viewBox="0 0 15.196 15.196">
+                                <path id="Vector" d="M0,0H15.2V15.2H0Z" fill="none" opacity="0" />
+                                <path id="Vector-2" data-name="Vector"
+                                    d="M8.985,0H3.679A3.379,3.379,0,0,0,0,3.679v5.3a3.381,3.381,0,0,0,3.679,3.685h5.3a3.379,3.379,0,0,0,3.679-3.679V3.679A3.371,3.371,0,0,0,8.985,0ZM6.015,9.656a.313.313,0,0,1-.437.291,10.416,10.416,0,0,0-2.463-.722l-.12-.013a.834.834,0,0,1-.7-.8V3.533a.8.8,0,0,1,.874-.81,7.591,7.591,0,0,1,2.7.861.308.308,0,0,1,.152.272ZM10.371,8.4a.834.834,0,0,1-.7.8l-.133.013a11.017,11.017,0,0,0-2.45.715.313.313,0,0,1-.437-.291V3.85a.316.316,0,0,1,.158-.279,7.719,7.719,0,0,1,2.659-.848h.025a.878.878,0,0,1,.88.88Z"
+                                    transform="translate(1.266 1.266)" fill="#d0ced2" />
+                            </svg>
+                            آموزش
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg id="message-square" xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                                viewBox="0 0 15.196 15.196">
+                                <path id="Vector" d="M0,0H15.2V15.2H0Z" fill="none" opacity="0" />
+                                <path id="Vector-2" data-name="Vector"
+                                    d="M8.985,0H3.679A3.379,3.379,0,0,0,0,3.679v5.3a3.381,3.381,0,0,0,3.679,3.685h5.3a3.379,3.379,0,0,0,3.679-3.679V3.679A3.371,3.371,0,0,0,8.985,0Zm1.323,6.908a3.6,3.6,0,0,1-.019.374A2.05,2.05,0,0,1,7.927,9.3h-.2a.381.381,0,0,0-.317.158l-.6.8a.563.563,0,0,1-.956,0l-.6-.8A.464.464,0,0,0,4.945,9.3h-.2C3.153,9.3,2.362,8.9,2.362,6.914v-2A2.05,2.05,0,0,1,4.375,2.552a3.225,3.225,0,0,1,.367-.019H7.927a2.105,2.105,0,0,1,2.381,2.381Z"
+                                    transform="translate(1.266 1.266)" fill="#d0ced2" />
+                            </svg>
+                            ارتباط با ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                                viewBox="0 0 15.196 15.196">
+                                <g id="message-question" transform="translate(-620 -252)">
+                                    <path id="Vector" d="M0,0H15.2V15.2H0Z" transform="translate(620 252)" fill="none"
+                                        opacity="0" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M9.5,0H3.166A2.991,2.991,0,0,0,0,3.166v3.8a2.991,2.991,0,0,0,3.166,3.166V11.48a.629.629,0,0,0,.981.526l2.818-1.874H9.5a2.991,2.991,0,0,0,3.166-3.166v-3.8A2.991,2.991,0,0,0,9.5,0ZM6.332,7.706a.475.475,0,1,1,.475-.475A.474.474,0,0,1,6.332,7.706Zm.8-2.628c-.247.165-.323.272-.323.45v.133a.475.475,0,0,1-.95,0V5.528A1.473,1.473,0,0,1,6.6,4.293c.234-.158.31-.266.31-.431a.576.576,0,1,0-1.152,0,.475.475,0,0,1-.95,0,1.526,1.526,0,0,1,3.052,0A1.452,1.452,0,0,1,7.13,5.078Z"
+                                        transform="translate(621.266 253.539)" fill="#d0ced2" />
+                                </g>
+                            </svg>
+                            سوالات متداول
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14.848" height="14.848"
+                                viewBox="0 0 14.848 14.848">
+                                <g id="vuesax_bold_global" data-name="vuesax/bold/global"
+                                    transform="translate(-172 -252)">
+                                    <path id="Vector"
+                                        d="M2.84,2.827c-.019,0-.043.012-.062.012A6.19,6.19,0,0,1,0,.062C0,.043.012.019.012,0A19.73,19.73,0,0,0,2.32.52,20.755,20.755,0,0,0,2.84,2.827Z"
+                                        transform="translate(173.893 262.109)" fill="#d0ced2" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M2.877.068A6.244,6.244,0,0,1,0,2.9,18.908,18.908,0,0,0,.563.52,19.352,19.352,0,0,0,2.864,0C2.858.025,2.877.049,2.877.068Z"
+                                        transform="translate(182.078 262.109)" fill="#d0ced2" />
+                                    <path id="Vector-3" data-name="Vector"
+                                        d="M2.926,2.926A19.576,19.576,0,0,0,.563,2.363,17.269,17.269,0,0,0,0,0,6.219,6.219,0,0,1,2.926,2.926Z"
+                                        transform="translate(182.078 253.844)" fill="#d0ced2" />
+                                    <path id="Vector-4" data-name="Vector"
+                                        d="M2.889.019a19.332,19.332,0,0,0-.513,2.3A17.86,17.86,0,0,0,0,2.877,6.244,6.244,0,0,1,2.827,0C2.846,0,2.871.019,2.889.019Z"
+                                        transform="translate(173.844 253.893)" fill="#d0ced2" />
+                                    <path id="Vector-5" data-name="Vector"
+                                        d="M4.318,2.84A19.381,19.381,0,0,0,0,2.84,17.553,17.553,0,0,1,.631.328,1.012,1.012,0,0,0,.643.192,6.438,6.438,0,0,1,2.159,0a6.386,6.386,0,0,1,1.51.192,1.027,1.027,0,0,0,.019.136A17.763,17.763,0,0,1,4.318,2.84Z"
+                                        transform="translate(177.265 253.237)" fill="#d0ced2" />
+                                    <path id="Vector-6" data-name="Vector"
+                                        d="M2.84,4.318A17.349,17.349,0,0,1,.328,3.687a1.012,1.012,0,0,0-.136-.012A6.438,6.438,0,0,1,0,2.159,6.386,6.386,0,0,1,.192.65,1.027,1.027,0,0,0,.328.631,18.417,18.417,0,0,1,2.84,0,20.152,20.152,0,0,0,2.84,4.318Z"
+                                        transform="translate(173.237 257.265)" fill="#d0ced2" />
+                                    <path id="Vector-7" data-name="Vector"
+                                        d="M2.84,2.159a6.438,6.438,0,0,1-.192,1.516,1.012,1.012,0,0,0-.136.012A18.648,18.648,0,0,1,0,4.318,19.381,19.381,0,0,0,0,0,17.553,17.553,0,0,1,2.512.631.515.515,0,0,0,2.648.65,6.427,6.427,0,0,1,2.84,2.159Z"
+                                        transform="translate(182.771 257.265)" fill="#d0ced2" />
+                                    <path id="Vector-8" data-name="Vector"
+                                        d="M4.318,0a17.349,17.349,0,0,1-.631,2.512,1.027,1.027,0,0,0-.019.136,6.386,6.386,0,0,1-1.51.192A6.438,6.438,0,0,1,.643,2.648a1.012,1.012,0,0,0-.012-.136A18.417,18.417,0,0,1,0,0,19.358,19.358,0,0,0,2.159.136,19.265,19.265,0,0,0,4.318,0Z"
+                                        transform="translate(177.265 262.771)" fill="#d0ced2" />
+                                    <path id="Vector-9" data-name="Vector"
+                                        d="M4.8,4.8a18.584,18.584,0,0,1-4.656,0,18.584,18.584,0,0,1,0-4.656A18.584,18.584,0,0,1,4.8.146,18.584,18.584,0,0,1,4.8,4.8Z"
+                                        transform="translate(176.949 256.949)" fill="#d0ced2" />
+                                    <path id="Vector-10" data-name="Vector" d="M0,0H14.848V14.848H0Z"
+                                        transform="translate(172 252)" fill="none" opacity="0" />
+                                    <path id="Vector-11" data-name="Vector" d="M0,0H14.848V14.848H0Z"
+                                        transform="translate(186.848 266.848) rotate(180)" fill="none" opacity="0" />
+                                </g>
+                            </svg>
+                            کشورها
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="userinfo-container d-flex justify-content-end align-items-center">
+                <span class="toggler d-flex d-md-none justify-content-center align-items-center">
+                    <svg id="frame" xmlns="http://www.w3.org/2000/svg" width="17.819" height="17.819"
+                        viewBox="0 0 17.819 17.819">
+                        <path id="Vector"
+                            d="M3.735,7.7h.059a.4.4,0,0,1,.134,0,3.82,3.82,0,1,0-.215,0Zm.119-6.586a2.737,2.737,0,0,1,.1,5.472,1.225,1.225,0,0,0-.238,0,2.738,2.738,0,0,1,.134-5.472Z"
+                            transform="translate(5.056 0.928)" fill="#332546" />
+                        <path id="Vector-2" data-name="Vector" d="M17.819,0H0V17.819H17.819Z" fill="none" opacity="0" />
+                        <path id="Vector-3" data-name="Vector"
+                            d="M5.62,7.508A7.334,7.334,0,0,0,9.644,6.394a3.186,3.186,0,0,0,1.6-2.636,3.219,3.219,0,0,0-1.6-2.651,7.861,7.861,0,0,0-8.048,0A3.2,3.2,0,0,0,0,3.744,3.219,3.219,0,0,0,1.6,6.394,7.351,7.351,0,0,0,5.62,7.508ZM9.028,2.044a2.135,2.135,0,0,1,1.1,1.722,2.13,2.13,0,0,1-1.1,1.708,6.709,6.709,0,0,1-6.816,0,2.135,2.135,0,0,1-1.1-1.722,2.13,2.13,0,0,1,1.1-1.708A6.744,6.744,0,0,1,9.028,2.044Z"
+                            transform="translate(3.163 9.234)" fill="#332546" />
+                    </svg>
+
+                </span>
+                <a href="#"
+                    class="button-outline ms-1 d-none d-md-flex justify-content-center align-items-center p-2 rounded-pill fs-12">
+
+                    <span class="button-outline-text">پنل کاربری</span>
+                </a>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <section class="d-flex justify-content-between align-items-start container">
+        <div class="dashboard-menu flex-shrink-0">
+
+            <label for="menu-toggler" class="toggler d-flex d-md-none justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10.507" height="10.507" viewBox="0 0 10.507 10.507">
+                    <g id="Group_12562" data-name="Group 12562" transform="translate(-319.438 -39.484)">
+                        <path id="Vector"
+                            d="M12.74,1.476H.642A.7.7,0,0,1,0,.738.7.7,0,0,1,.642,0h12.1a.7.7,0,0,1,.642.738A.7.7,0,0,1,12.74,1.476Z"
+                            transform="translate(320.482 39.484) rotate(45)" fill="#332546" />
+                        <path id="Vector-2" data-name="Vector"
+                            d="M12.74,1.476H.642A.7.7,0,0,1,0,.738.7.7,0,0,1,.642,0h12.1a.7.7,0,0,1,.642.738A.7.7,0,0,1,12.74,1.476Z"
+                            transform="translate(319.438 48.947) rotate(-45)" fill="#332546" />
+                    </g>
+                </svg>
+
+
+
+
+            </label>
+
+            <ul class="position-relative dashboard-ul">
+                <div class="icon-color-line h-100"></div>
+                <li class="position-relative">
+                    <a href="/dashboard-index.html" class="active  d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <!-- <span class="active-bg position-absolute z-0"></span> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16.795" height="16.795"
+                                viewBox="0 0 16.795 16.795">
+                                <g id="vuesax_outline_home-2" data-name="vuesax/outline/home-2"
+                                    transform="translate(-620 -188)">
+                                    <g id="home-2" transform="translate(620 188)">
+                                        <path id="Vector"
+                                            d="M11.575,15.029h-8.1A3.476,3.476,0,0,1,0,11.551V6.366A3.85,3.85,0,0,1,1.344,3.63L5.116.69a3.638,3.638,0,0,1,4.122-.1l4.325,3.03a3.823,3.823,0,0,1,1.484,2.841v5.095A3.475,3.475,0,0,1,11.575,15.029ZM5.759,1.516,1.987,4.455a2.844,2.844,0,0,0-.938,1.91v5.186A2.428,2.428,0,0,0,3.471,13.98h8.1A2.422,2.422,0,0,0,14,11.558V6.464a2.777,2.777,0,0,0-1.036-1.98L8.636,1.453A2.6,2.6,0,0,0,5.759,1.516Z"
+                                            transform="translate(0.875 0.891)" fill="#3d3154" />
+                                        <path id="Vector-2" data-name="Vector"
+                                            d="M.525,3.149A.529.529,0,0,1,0,2.624V.525A.529.529,0,0,1,.525,0,.529.529,0,0,1,1.05.525v2.1A.529.529,0,0,1,.525,3.149Z"
+                                            transform="translate(7.873 9.972)" fill="#3d3154" />
+                                        <path id="Vector-3" data-name="Vector" d="M0,0H16.8V16.8H0Z" fill="none"
+                                            opacity="0" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.992" height="15.036"
+                                viewBox="0 0 14.992 15.036">
+                                <defs>
+                                    <linearGradient id="linear-gradient-1" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.749" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="Exclusion_7" data-name="Exclusion 7"
+                                    d="M11.533,15.035H3.46A3.474,3.474,0,0,1,0,11.554V6.367A3.874,3.874,0,0,1,1.34,3.63L5.092.689A3.473,3.473,0,0,1,7.224,0,3.46,3.46,0,0,1,9.2.591l4.314,3.03a3.839,3.839,0,0,1,1.475,2.842v5.1A3.47,3.47,0,0,1,11.533,15.035ZM7.522,9.065A.519.519,0,0,0,7,9.583v2.073a.519.519,0,0,0,.518.518.525.525,0,0,0,.517-.518V9.583A.525.525,0,0,0,7.522,9.065Z"
+                                    transform="translate(0 0.001)" fill="url(#linear-gradient-1)" />
+                            </svg>
+
+
+
+                        </span>
+                        داشبورد
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="/buy.html" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg id="bag-2" xmlns="http://www.w3.org/2000/svg" width="16.445" height="16.446"
+                                viewBox="0 0 16.445 16.446">
+                                <path id="Vector"
+                                    d="M6.681,5.06a.518.518,0,0,1-.514-.514V3.6a2.59,2.59,0,0,0-.843-1.9,2.543,2.543,0,0,0-1.98-.651A2.77,2.77,0,0,0,1.028,3.737V4.4a.518.518,0,0,1-.514.514A.518.518,0,0,1,0,4.4V3.731A3.8,3.8,0,0,1,3.248.017,3.555,3.555,0,0,1,6.016.935,3.611,3.611,0,0,1,7.195,3.6v.946A.518.518,0,0,1,6.681,5.06Z"
+                                    transform="translate(4.625 0.854)" fill="#3d3154" />
+                                <path id="Vector-2" data-name="Vector"
+                                    d="M8.568,10.621H4.456C1.291,10.621.7,9.148.551,7.716l-.514-4.1a3.252,3.252,0,0,1,.617-2.6A4,4,0,0,1,3.771,0H9.253a4.009,4.009,0,0,1,3.118,1.014A3.259,3.259,0,0,1,12.987,3.6l-.514,4.118C12.323,9.148,11.734,10.621,8.568,10.621Zm-4.8-9.593a3.142,3.142,0,0,0-2.357.678,2.217,2.217,0,0,0-.356,1.788l.514,4.1c.116,1.1.418,2,2.885,2H8.568c2.467,0,2.768-.9,2.885-1.987l.514-4.118a2.221,2.221,0,0,0-.356-1.782,3.112,3.112,0,0,0-2.357-.685Z"
+                                    transform="translate(1.711 4.968)" fill="#3d3154" />
+                                <path id="Vector-3" data-name="Vector"
+                                    d="M.692,1.37A.685.685,0,1,1,1.37.685.681.681,0,0,1,.692,1.37Z"
+                                    transform="translate(9.874 7.64)" fill="#3d3154" />
+                                <path id="Vector-4" data-name="Vector"
+                                    d="M.692,1.37A.685.685,0,1,1,1.37.685.681.681,0,0,1,.692,1.37Z"
+                                    transform="translate(5.077 7.64)" fill="#3d3154" />
+                                <path id="Vector-5" data-name="Vector" d="M0,0H16.445V16.446H0Z" fill="none"
+                                    opacity="0" />
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="17.626" height="17.626"
+                                viewBox="0 0 17.626 17.626">
+                                <defs>
+                                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.51" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <g id="vuesax_bold_bag-2" data-name="vuesax/bold/bag-2"
+                                    transform="translate(-556 -188)">
+                                    <g id="bag-2" transform="translate(556 188)">
+                                        <path id="Vector"
+                                            d="M12.341,5.113a3.4,3.4,0,0,0-2.262-.969V3.586A3.592,3.592,0,0,0,6.142.016a3.78,3.78,0,0,0-3.231,3.7v.426a3.4,3.4,0,0,0-2.262.969A3.229,3.229,0,0,0,.039,7.7l.514,4.091c.154,1.432.734,2.9,3.892,2.9h4.1c3.158,0,3.738-1.469,3.892-2.894l.514-4.105A3.247,3.247,0,0,0,12.341,5.113Zm-6.1-4.076A2.56,2.56,0,0,1,9.058,3.586V4.1H3.932V3.718A2.762,2.762,0,0,1,6.245,1.037ZM3.866,8.19H3.858a.738.738,0,1,1,.007,0Zm5.141,0H9a.738.738,0,1,1,.007,0Z"
+                                            transform="translate(2.318 1.467)" fill="url(#linear-gradient)" />
+                                        <path id="Vector-2" data-name="Vector" d="M0,0H17.626V17.626H0Z"
+                                            transform="translate(17.626 17.626) rotate(180)" fill="none" opacity="0" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                        خرید اکانت
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="/extension.html" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg id="vuesax_outline_refresh-2" data-name="vuesax/outline/refresh-2"
+                                xmlns="http://www.w3.org/2000/svg" width="14.332" height="14.332"
+                                viewBox="0 0 14.332 14.332">
+                                <g id="refresh-2" transform="translate(0 0)">
+                                    <path id="Vector" d="M1.11,14.44v2.986" transform="translate(0.747 -4.622)"
+                                        fill="none" stroke="#3d3154" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M11.944,5.972a5.974,5.974,0,0,1-5.972,5.972c-3.3,0-5.309-3.32-5.309-3.32h2.7M0,5.972A5.959,5.959,0,0,1,5.972,0a7.346,7.346,0,0,1,5.972,3.32m0,0V.334m0,2.986H9.292"
+                                        transform="translate(1.194 1.194)" fill="none" stroke="#3d3154"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                                    <path id="Vector-3" data-name="Vector" d="M0,0H14.332V14.332H0Z" fill="none"
+                                        opacity="0" />
+                                </g>
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13.37" height="13.37"
+                                viewBox="0 0 13.37 13.37">
+                                <defs>
+                                    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.502" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="Vector"
+                                    d="M10.435,17.12a6.542,6.542,0,0,1-4.428-1.893v.759a.8.8,0,0,1-1.6,0V13.045a.808.808,0,0,1,.8-.8H7.857a.8.8,0,0,1,0,1.6H6.895a5.151,5.151,0,0,0,3.54,1.669,5.085,5.085,0,0,0,5.08-5.08.8.8,0,1,1,1.6,0A6.687,6.687,0,0,1,10.435,17.12ZM17.12,7.8v.086a.8.8,0,0,1-.1.321.846.846,0,0,1-.225.257.961.961,0,0,1-.257.128.814.814,0,0,1-.225.032h-2.6a.8.8,0,0,1,0-1.6h.888a6.044,6.044,0,0,0-4.15-1.669,5.085,5.085,0,0,0-5.08,5.08.808.808,0,0,1-.8.8.827.827,0,0,1-.824-.8A6.687,6.687,0,0,1,10.435,3.75,7.633,7.633,0,0,1,15.515,5.7V4.884a.8.8,0,1,1,1.6,0Z"
+                                    transform="translate(-3.75 -3.75)" fill="url(#linear-gradient-3)" />
+                            </svg>
+
+                        </span>
+                        تمدید اکانت
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16.583" height="16.583"
+                                viewBox="0 0 16.583 16.583">
+                                <g id="vuesax_outline_timer" data-name="vuesax/outline/timer"
+                                    transform="translate(-236 -188)">
+                                    <g id="timer" transform="translate(236 188)">
+                                        <path id="Vector"
+                                            d="M6.564,13.129a6.564,6.564,0,1,1,6.564-6.564A6.57,6.57,0,0,1,6.564,13.129Zm0-12.092a5.528,5.528,0,1,0,5.528,5.528A5.535,5.535,0,0,0,6.564,1.036Z"
+                                            transform="translate(1.727 2.591)" fill="#392c4e" />
+                                        <path id="Vector-2" data-name="Vector"
+                                            d="M.518,4.491A.522.522,0,0,1,0,3.973V.518A.522.522,0,0,1,.518,0a.522.522,0,0,1,.518.518V3.973A.522.522,0,0,1,.518,4.491Z"
+                                            transform="translate(7.774 5.01)" fill="#392c4e" />
+                                        <path id="Vector-3" data-name="Vector"
+                                            d="M4.664,1.036H.518A.522.522,0,0,1,0,.518.522.522,0,0,1,.518,0H4.664a.522.522,0,0,1,.518.518A.522.522,0,0,1,4.664,1.036Z"
+                                            transform="translate(5.701 0.864)" fill="#392c4e" />
+                                        <path id="Vector-4" data-name="Vector" d="M0,0H16.583V16.583H0Z" fill="none"
+                                            opacity="0" />
+                                    </g>
+                                </g>
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="12.941" height="14.927"
+                                viewBox="0 0 12.941 14.927">
+                                <defs>
+                                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" />
+                                        <stop offset="1" stop-color="#fff" stop-opacity="0.749" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="Union_432" data-name="Union 432"
+                                    d="M12163,2761.45a6.471,6.471,0,1,1,6.47,6.478A6.479,6.479,0,0,1,12163,2761.45Zm5.91-3.973v3.731a.561.561,0,1,0,1.121,0v-3.731a.561.561,0,0,0-1.121,0Zm-1.6-3.395a.541.541,0,0,1,0-1.082h4.314a.535.535,0,0,1,.538.538.543.543,0,0,1-.538.544Z"
+                                    transform="translate(-12163 -2753.001)" fill="url(#linear-gradient)" />
+                            </svg>
+
+                        </span>
+                        تست سرعت
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13.829" height="12.675"
+                                viewBox="0 0 13.829 12.675">
+                                <path id="Path_8286" data-name="Path 8286"
+                                    d="M-8422.146-2484.915h3.38v4.966l4.964-4.966h4.386l-11.575,11.575v-10.194h-1.154Z"
+                                    transform="translate(8422.695 2485.465)" fill="none" stroke="#3d3154"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" />
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13.472" height="12.802"
+                                viewBox="0 0 13.472 12.802">
+                                <defs>
+                                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.749" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="Path_8287" data-name="Path 8287"
+                                    d="M-8638.34-3603.428h1.409v11.321l12.063-12.8H-8629l-5.643,5.431v-5.431h-3.7Z"
+                                    transform="translate(8638.34 3604.909)" fill="url(#linear-gradient)" />
+                            </svg>
+
+                        </span>
+                        V2Ray
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="/dashboard-tutorial.html" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg id="vuesax_outline_book" data-name="vuesax/outline/book"
+                                xmlns="http://www.w3.org/2000/svg" width="16.583" height="16.583"
+                                viewBox="0 0 16.583 16.583">
+                                <g id="book" transform="translate(0 0)">
+                                    <path id="Vector"
+                                        d="M7.428,13.931a1.213,1.213,0,0,1-.587-.145,17.331,17.331,0,0,0-4.989-1.638l-.2-.028A1.947,1.947,0,0,1,0,10.241V1.894A1.874,1.874,0,0,1,2.052.008,13.348,13.348,0,0,1,7.165,1.7l.166.1a.269.269,0,0,0,.193.007l.111-.069A13.623,13.623,0,0,1,12.755.015h.083a1.832,1.832,0,0,1,1.41.491,1.87,1.87,0,0,1,.608,1.4v8.34A1.941,1.941,0,0,1,13.2,12.128l-.228.028A17.138,17.138,0,0,0,8,13.793,1.137,1.137,0,0,1,7.428,13.931ZM1.886,1.038a.845.845,0,0,0-.58.221.855.855,0,0,0-.269.636v8.347a.913.913,0,0,0,.746.857l.207.028a18.354,18.354,0,0,1,5.32,1.741.31.31,0,0,0,.187.021,18.049,18.049,0,0,1,5.341-1.762l.235-.028a.907.907,0,0,0,.746-.857V1.9a.87.87,0,0,0-.269-.643.9.9,0,0,0-.663-.221H12.8A12.7,12.7,0,0,0,8.195,2.592l-.111.076A1.276,1.276,0,0,1,6.8,2.675l-.166-.1A12.723,12.723,0,0,0,1.969,1.038Z"
+                                        transform="translate(0.864 1.326)" fill="#3d3154" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M.518,11.4A.522.522,0,0,1,0,10.883V.518A.522.522,0,0,1,.518,0a.522.522,0,0,1,.518.518V10.883A.518.518,0,0,1,.518,11.4Z"
+                                        transform="translate(7.773 3.275)" fill="#3d3154" />
+                                    <path id="Vector-3" data-name="Vector"
+                                        d="M2.073,1.036H.518A.522.522,0,0,1,0,.518.522.522,0,0,1,.518,0H2.073a.522.522,0,0,1,.518.518A.522.522,0,0,1,2.073,1.036Z"
+                                        transform="translate(3.282 5.348)" fill="#3d3154" />
+                                    <path id="Vector-4" data-name="Vector"
+                                        d="M2.591,1.036H.518A.522.522,0,0,1,0,.518.522.522,0,0,1,.518,0H2.591a.522.522,0,0,1,.518.518A.522.522,0,0,1,2.591,1.036Z"
+                                        transform="translate(3.282 7.421)" fill="#3d3154" />
+                                    <path id="Vector-5" data-name="Vector" d="M0,0H16.583V16.583H0Z" fill="none"
+                                        opacity="0" />
+                                </g>
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="17.574" height="17.574"
+                                viewBox="0 0 17.574 17.574">
+                                <defs>
+                                    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.502" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <g id="vuesax_bold_book" data-name="vuesax/bold/book" transform="translate(-556 -188)">
+                                    <path id="Vector"
+                                        d="M6.773,1.589V10.3a1.505,1.505,0,0,1-1.289,1.45l-.227.029A18.75,18.75,0,0,0,1,13a.731.731,0,0,1-1-.681V2.138a.747.747,0,0,1,.4-.652A14.051,14.051,0,0,1,5.14,0h.044A1.588,1.588,0,0,1,6.773,1.589Z"
+                                        transform="translate(565.336 189.962)" fill="url(#linear-gradient-5)" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M6.385,1.486A14.051,14.051,0,0,0,1.64,0H1.589A1.588,1.588,0,0,0,0,1.589V10.3a1.505,1.505,0,0,0,1.289,1.45l.227.029A18.75,18.75,0,0,1,5.77,13a.731.731,0,0,0,1-.681V2.138A.732.732,0,0,0,6.385,1.486ZM2.2,3.705H3.852a.549.549,0,0,1,0,1.1H2.2a.549.549,0,1,1,0-1.1ZM4.4,7H2.2a.549.549,0,1,1,0-1.1H4.4A.549.549,0,0,1,4.4,7Z"
+                                        transform="translate(557.457 189.962)" fill="url(#linear-gradient-5)" />
+                                    <path id="Vector-3" data-name="Vector" d="M0,0H17.574V17.574H0Z"
+                                        transform="translate(573.574 205.574) rotate(180)" fill="none" opacity="0" />
+                                </g>
+                            </svg>
+
+                        </span>
+                        آموزش
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16.583" height="16.583"
+                                viewBox="0 0 16.583 16.583">
+                                <g id="vuesax_outline_gift" data-name="vuesax/outline/gift"
+                                    transform="translate(-236 -252)">
+                                    <g id="gift" transform="translate(236 252)">
+                                        <path id="Vector"
+                                            d="M8.81,9.328H3.282C.919,9.328,0,8.409,0,6.046V.518A.522.522,0,0,1,.518,0H11.574a.522.522,0,0,1,.518.518V6.046C12.092,8.409,11.173,9.328,8.81,9.328ZM1.036,1.036v5.01c0,1.783.463,2.246,2.246,2.246H8.81c1.783,0,2.246-.463,2.246-2.246V1.036Z"
+                                            transform="translate(2.225 6.392)" fill="#3d3154" />
+                                        <path id="Vector-2" data-name="Vector"
+                                            d="M12.265,4.491H1.9A1.728,1.728,0,0,1,0,2.591V1.9A1.728,1.728,0,0,1,1.9,0H12.265a1.761,1.761,0,0,1,1.9,1.9v.691A1.761,1.761,0,0,1,12.265,4.491ZM1.9,1.036c-.629,0-.864.235-.864.864v.691c0,.629.235.864.864.864H12.265c.608,0,.864-.256.864-.864V1.9c0-.608-.256-.864-.864-.864Z"
+                                            transform="translate(1.209 2.937)" fill="#3d3154" />
+                                        <path id="Vector-3" data-name="Vector"
+                                            d="M4.5,3.106H.687a.523.523,0,0,1-.38-.166A1.171,1.171,0,0,1,.341,1.323L1.323.342a1.184,1.184,0,0,1,1.665,0L4.867,2.221a.52.52,0,0,1,.111.567A.505.505,0,0,1,4.5,3.106ZM1.067,2.069h2.19l-1-1a.142.142,0,0,0-.2,0l-.981.981C1.074,2.063,1.067,2.063,1.067,2.069Z"
+                                            transform="translate(3.542 0.867)" fill="#3d3154" />
+                                        <path id="Vector-4" data-name="Vector"
+                                            d="M4.331,3.106H.517A.512.512,0,0,1,.04,2.788a.523.523,0,0,1,.111-.567L2.03.342A1.184,1.184,0,0,1,3.7.342l.981.981A1.164,1.164,0,0,1,4.711,2.94.523.523,0,0,1,4.331,3.106ZM1.775,2.069h2.19l-.014-.014L2.97,1.074a.142.142,0,0,0-.2,0Z"
+                                            transform="translate(8.016 0.867)" fill="#3d3154" />
+                                        <path id="Vector-5" data-name="Vector"
+                                            d="M1.209,5.286A1.21,1.21,0,0,1,0,4.077V.518A.522.522,0,0,1,.518,0H4.692A.522.522,0,0,1,5.21.518V4.063a1.206,1.206,0,0,1-1.879,1L2.716,4.65a.166.166,0,0,0-.193,0l-.65.428A1.175,1.175,0,0,1,1.209,5.286Zm-.173-4.25V4.07a.174.174,0,0,0,.269.145l.65-.428a1.2,1.2,0,0,1,1.334,0L3.9,4.2a.174.174,0,0,0,.269-.145V1.03H1.036Z"
+                                            transform="translate(5.659 6.392)" fill="#3d3154" />
+                                        <path id="Vector-6" data-name="Vector" d="M0,0H16.583V16.583H0Z" fill="none"
+                                            opacity="0" />
+                                    </g>
+                                </g>
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.001" height="14.998"
+                                viewBox="0 0 14.001 14.998">
+                                <defs>
+                                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.749" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="Union_433" data-name="Union 433"
+                                    d="M10301.053,2768a2.972,2.972,0,0,1-2.947-3v-4.5a.746.746,0,0,1,.735-.752h1.453a.747.747,0,0,1,.736.752v2.353a1.513,1.513,0,0,0,.782,1.328,1.391,1.391,0,0,0,.69.181,1.423,1.423,0,0,0,.8-.249l.7-.464.649.443a1.433,1.433,0,0,0,1.5.081,1.5,1.5,0,0,0,.789-1.326V2760.5a.747.747,0,0,1,.736-.752h1.474a.747.747,0,0,1,.738.752v4.5a2.974,2.974,0,0,1-2.948,3Zm.692-5.137V2760.5a.745.745,0,0,1,.737-.752h2.968a.748.748,0,0,1,.738.752v2.347a.732.732,0,0,1-1.143.621l-.664-.448a.717.717,0,0,0-.81,0l-.693.464a.714.714,0,0,1-.4.125A.741.741,0,0,1,10301.745,2762.86Zm-3.271-3.862a1.322,1.322,0,0,1-1.476-1.5v-.751a1.322,1.322,0,0,1,1.476-1.5h1.193a.709.709,0,0,1,.021-.975l1.046-1.066a.7.7,0,0,1,1,0l2,2.041h.524l2-2.041a.7.7,0,0,1,1,0l1.045,1.066a.712.712,0,0,1,.023.975h1.2a1.342,1.342,0,0,1,1.474,1.5v.751a1.341,1.341,0,0,1-1.474,1.5Z"
+                                    transform="translate(-10296.999 -2752.999)" fill="url(#linear-gradient)" />
+                            </svg>
+
+                        </span>
+                        کارت هدیه
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg id="vuesax_outline_setting" data-name="vuesax/outline/setting"
+                                xmlns="http://www.w3.org/2000/svg" width="16.721" height="16.721"
+                                viewBox="0 0 16.721 16.721">
+                                <g id="setting" transform="translate(0 0)">
+                                    <path id="Vector"
+                                        d="M6.8,14.817a2.644,2.644,0,0,1-1.31-.32L1.658,12.288C.1,11.236,0,11.076,0,9.425V5.4c0-1.651.091-1.811,1.623-2.85L5.483.319A2.836,2.836,0,0,1,8.1.319l3.846,2.216C13.5,3.586,13.6,3.747,13.6,5.4v4.02c0,1.651-.091,1.811-1.623,2.85L8.117,14.5A2.689,2.689,0,0,1,6.8,14.817ZM6.8,1.05a1.6,1.6,0,0,0-.78.174L2.188,3.44c-1.136.766-1.136.766-1.136,1.958v4.02c0,1.191,0,1.191,1.163,1.979l3.8,2.195a1.818,1.818,0,0,0,1.568,0l3.832-2.216c1.129-.766,1.129-.766,1.129-1.958V5.4c0-1.191,0-1.191-1.163-1.979L7.58,1.224A1.6,1.6,0,0,0,6.8,1.05Z"
+                                        transform="translate(1.561 0.949)" fill="#3d3154" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M2.613,5.225A2.613,2.613,0,1,1,5.225,2.613,2.614,2.614,0,0,1,2.613,5.225Zm0-4.18A1.568,1.568,0,1,0,4.18,2.613,1.57,1.57,0,0,0,2.613,1.045Z"
+                                        transform="translate(5.748 5.748)" fill="#3d3154" />
+                                    <path id="Vector-3" data-name="Vector" d="M0,0H16.721V16.721H0Z" fill="none"
+                                        opacity="0" />
+                                </g>
+                            </svg>
+                            <svg class="active" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="17.553" height="17.553"
+                                viewBox="0 0 17.553 17.553">
+                                <defs>
+                                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                                        <stop offset="0" stop-color="#fff" stop-opacity="0.502" />
+                                        <stop offset="1" stop-color="#fff" />
+                                    </linearGradient>
+                                </defs>
+                                <g id="vuesax_bold_setting" data-name="vuesax/bold/setting"
+                                    transform="translate(-236 -190)">
+                                    <g id="setting" transform="translate(236 190)">
+                                        <path id="Vector"
+                                            d="M11.782,2.5,8,.313a2.821,2.821,0,0,0-2.582,0L1.6,2.514C.088,3.538,0,3.692,0,5.323V9.294c0,1.631.088,1.792,1.631,2.83l3.781,2.187a2.63,2.63,0,0,0,1.295.314,2.582,2.582,0,0,0,1.287-.314l3.818-2.2c1.514-1.024,1.6-1.177,1.6-2.808V5.323C13.413,3.692,13.325,3.538,11.782,2.5ZM6.707,9.689A2.377,2.377,0,1,1,9.084,7.312,2.382,2.382,0,0,1,6.707,9.689Z"
+                                            transform="translate(2.07 1.465)" fill="url(#linear-gradient)" />
+                                        <path id="Vector-2" data-name="Vector" d="M0,0H17.553V17.553H0Z"
+                                            transform="translate(17.553 17.553) rotate(180)" fill="none" opacity="0" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                        تنظیمات
+                    </a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class=" d-flex justify-content-start align-items-center">
+                        <span class="position-absolute d-flex justify-content-center align-items-center">
+                            <svg id="vuesax_outline_logout" data-name="vuesax/outline/logout"
+                                xmlns="http://www.w3.org/2000/svg" width="16.583" height="16.583"
+                                viewBox="0 0 16.583 16.583">
+                                <g id="logout">
+                                    <path id="Vector"
+                                        d="M4.9,14.192H4.81c-3.068,0-4.546-1.209-4.8-3.918a.519.519,0,0,1,.47-.567.528.528,0,0,1,.567.47c.2,2.17,1.223,2.978,3.773,2.978h.09c2.812,0,3.807-.995,3.807-3.807v-4.5c0-2.812-.995-3.807-3.807-3.807h-.09c-2.563,0-3.586.822-3.773,3.033A.524.524,0,0,1,0,3.98C.236,1.23,1.722,0,4.81,0H4.9C8.293,0,9.744,1.451,9.744,4.843v4.5C9.744,12.741,8.293,14.192,4.9,14.192Z"
+                                        transform="translate(5.63 1.195)" fill="#3d3154" />
+                                    <path id="Vector-2" data-name="Vector"
+                                        d="M8.381,1.036H.518A.522.522,0,0,1,0,.518.522.522,0,0,1,.518,0H8.381A.522.522,0,0,1,8.9.518.522.522,0,0,1,8.381,1.036Z"
+                                        transform="translate(1.983 7.773)" fill="#3d3154" />
+                                    <path id="Vector-3" data-name="Vector"
+                                        d="M2.831,5.664a.512.512,0,0,1-.366-.152L.15,3.2a.521.521,0,0,1,0-.732L2.465.15A.518.518,0,0,1,3.2.883L1.249,2.831,3.2,4.78a.521.521,0,0,1,0,.732A.5.5,0,0,1,2.831,5.664Z"
+                                        transform="translate(1.211 5.46)" fill="#3d3154" />
+                                    <path id="Vector-4" data-name="Vector" d="M0,0H16.583V16.583H0Z" fill="none"
+                                        opacity="0" />
+                                </g>
+                            </svg>
+
+                        </span>
+                        خروج
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="d-flex d-md-none flex-wrap w-100 header-ul">
+
+                <li>
+                    <a href="#" class="active fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                            viewBox="0 0 15.196 15.196">
+                            <g id="home" transform="translate(0 0)">
+                                <path id="Vector"
+                                    d="M12.03,3.805,7.883.488A2.384,2.384,0,0,0,5,.481L.855,3.805A2.48,2.48,0,0,0,.025,5.977l.8,4.774a2.353,2.353,0,0,0,2.26,1.912H9.8a2.389,2.389,0,0,0,2.267-1.919l.8-4.774A2.544,2.544,0,0,0,12.03,3.805ZM6.914,10.131a.475.475,0,1,1-.95,0v-1.9a.475.475,0,0,1,.95,0Z"
+                                    transform="translate(1.159 1.266)" fill="#d0ced2" />
+                                <path id="Vector-2" data-name="Vector" d="M0,0H15.2V15.2H0Z"
+                                    transform="translate(15.196 15.196) rotate(180)" fill="none" opacity="0" />
+                            </g>
+                        </svg>
+                        خانه
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                            viewBox="0 0 15.196 15.196">
+                            <g id="bag-2" transform="translate(0 0)">
+                                <path id="Vector"
+                                    d="M10.64,4.408a2.929,2.929,0,0,0-1.95-.836V3.091A3.1,3.1,0,0,0,5.3.014,3.259,3.259,0,0,0,2.51,3.205v.367a2.929,2.929,0,0,0-1.95.836A2.784,2.784,0,0,0,.034,6.637l.443,3.527c.133,1.235.633,2.5,3.356,2.5H7.366c2.723,0,3.223-1.266,3.356-2.495l.443-3.539A2.8,2.8,0,0,0,10.64,4.408ZM5.384.894a2.207,2.207,0,0,1,2.425,2.2v.443H3.39V3.205A2.381,2.381,0,0,1,5.384.894ZM3.333,7.061H3.326a.636.636,0,1,1,.006,0Zm4.432,0H7.759a.636.636,0,1,1,.006,0Z"
+                                    transform="translate(1.999 1.265)" fill="#7e37ed" />
+                                <path id="Vector-2" data-name="Vector" d="M0,0H15.2V15.2H0Z"
+                                    transform="translate(15.196 15.196) rotate(180)" fill="none" opacity="0" />
+                            </g>
+                        </svg>
+                        فروشگاه
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg id="book-square" xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                            viewBox="0 0 15.196 15.196">
+                            <path id="Vector" d="M0,0H15.2V15.2H0Z" fill="none" opacity="0" />
+                            <path id="Vector-2" data-name="Vector"
+                                d="M8.985,0H3.679A3.379,3.379,0,0,0,0,3.679v5.3a3.381,3.381,0,0,0,3.679,3.685h5.3a3.379,3.379,0,0,0,3.679-3.679V3.679A3.371,3.371,0,0,0,8.985,0ZM6.015,9.656a.313.313,0,0,1-.437.291,10.416,10.416,0,0,0-2.463-.722l-.12-.013a.834.834,0,0,1-.7-.8V3.533a.8.8,0,0,1,.874-.81,7.591,7.591,0,0,1,2.7.861.308.308,0,0,1,.152.272ZM10.371,8.4a.834.834,0,0,1-.7.8l-.133.013a11.017,11.017,0,0,0-2.45.715.313.313,0,0,1-.437-.291V3.85a.316.316,0,0,1,.158-.279,7.719,7.719,0,0,1,2.659-.848h.025a.878.878,0,0,1,.88.88Z"
+                                transform="translate(1.266 1.266)" fill="#d0ced2" />
+                        </svg>
+                        آموزش
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg id="message-square" xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                            viewBox="0 0 15.196 15.196">
+                            <path id="Vector" d="M0,0H15.2V15.2H0Z" fill="none" opacity="0" />
+                            <path id="Vector-2" data-name="Vector"
+                                d="M8.985,0H3.679A3.379,3.379,0,0,0,0,3.679v5.3a3.381,3.381,0,0,0,3.679,3.685h5.3a3.379,3.379,0,0,0,3.679-3.679V3.679A3.371,3.371,0,0,0,8.985,0Zm1.323,6.908a3.6,3.6,0,0,1-.019.374A2.05,2.05,0,0,1,7.927,9.3h-.2a.381.381,0,0,0-.317.158l-.6.8a.563.563,0,0,1-.956,0l-.6-.8A.464.464,0,0,0,4.945,9.3h-.2C3.153,9.3,2.362,8.9,2.362,6.914v-2A2.05,2.05,0,0,1,4.375,2.552a3.225,3.225,0,0,1,.367-.019H7.927a2.105,2.105,0,0,1,2.381,2.381Z"
+                                transform="translate(1.266 1.266)" fill="#d0ced2" />
+                        </svg>
+                        ارتباط با ما
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
+                            viewBox="0 0 15.196 15.196">
+                            <g id="message-question" transform="translate(-620 -252)">
+                                <path id="Vector" d="M0,0H15.2V15.2H0Z" transform="translate(620 252)" fill="none"
+                                    opacity="0" />
+                                <path id="Vector-2" data-name="Vector"
+                                    d="M9.5,0H3.166A2.991,2.991,0,0,0,0,3.166v3.8a2.991,2.991,0,0,0,3.166,3.166V11.48a.629.629,0,0,0,.981.526l2.818-1.874H9.5a2.991,2.991,0,0,0,3.166-3.166v-3.8A2.991,2.991,0,0,0,9.5,0ZM6.332,7.706a.475.475,0,1,1,.475-.475A.474.474,0,0,1,6.332,7.706Zm.8-2.628c-.247.165-.323.272-.323.45v.133a.475.475,0,0,1-.95,0V5.528A1.473,1.473,0,0,1,6.6,4.293c.234-.158.31-.266.31-.431a.576.576,0,1,0-1.152,0,.475.475,0,0,1-.95,0,1.526,1.526,0,0,1,3.052,0A1.452,1.452,0,0,1,7.13,5.078Z"
+                                    transform="translate(621.266 253.539)" fill="#d0ced2" />
+                            </g>
+                        </svg>
+                        سوالات متداول
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14.848" height="14.848"
+                            viewBox="0 0 14.848 14.848">
+                            <g id="vuesax_bold_global" data-name="vuesax/bold/global" transform="translate(-172 -252)">
+                                <path id="Vector"
+                                    d="M2.84,2.827c-.019,0-.043.012-.062.012A6.19,6.19,0,0,1,0,.062C0,.043.012.019.012,0A19.73,19.73,0,0,0,2.32.52,20.755,20.755,0,0,0,2.84,2.827Z"
+                                    transform="translate(173.893 262.109)" fill="#d0ced2" />
+                                <path id="Vector-2" data-name="Vector"
+                                    d="M2.877.068A6.244,6.244,0,0,1,0,2.9,18.908,18.908,0,0,0,.563.52,19.352,19.352,0,0,0,2.864,0C2.858.025,2.877.049,2.877.068Z"
+                                    transform="translate(182.078 262.109)" fill="#d0ced2" />
+                                <path id="Vector-3" data-name="Vector"
+                                    d="M2.926,2.926A19.576,19.576,0,0,0,.563,2.363,17.269,17.269,0,0,0,0,0,6.219,6.219,0,0,1,2.926,2.926Z"
+                                    transform="translate(182.078 253.844)" fill="#d0ced2" />
+                                <path id="Vector-4" data-name="Vector"
+                                    d="M2.889.019a19.332,19.332,0,0,0-.513,2.3A17.86,17.86,0,0,0,0,2.877,6.244,6.244,0,0,1,2.827,0C2.846,0,2.871.019,2.889.019Z"
+                                    transform="translate(173.844 253.893)" fill="#d0ced2" />
+                                <path id="Vector-5" data-name="Vector"
+                                    d="M4.318,2.84A19.381,19.381,0,0,0,0,2.84,17.553,17.553,0,0,1,.631.328,1.012,1.012,0,0,0,.643.192,6.438,6.438,0,0,1,2.159,0a6.386,6.386,0,0,1,1.51.192,1.027,1.027,0,0,0,.019.136A17.763,17.763,0,0,1,4.318,2.84Z"
+                                    transform="translate(177.265 253.237)" fill="#d0ced2" />
+                                <path id="Vector-6" data-name="Vector"
+                                    d="M2.84,4.318A17.349,17.349,0,0,1,.328,3.687a1.012,1.012,0,0,0-.136-.012A6.438,6.438,0,0,1,0,2.159,6.386,6.386,0,0,1,.192.65,1.027,1.027,0,0,0,.328.631,18.417,18.417,0,0,1,2.84,0,20.152,20.152,0,0,0,2.84,4.318Z"
+                                    transform="translate(173.237 257.265)" fill="#d0ced2" />
+                                <path id="Vector-7" data-name="Vector"
+                                    d="M2.84,2.159a6.438,6.438,0,0,1-.192,1.516,1.012,1.012,0,0,0-.136.012A18.648,18.648,0,0,1,0,4.318,19.381,19.381,0,0,0,0,0,17.553,17.553,0,0,1,2.512.631.515.515,0,0,0,2.648.65,6.427,6.427,0,0,1,2.84,2.159Z"
+                                    transform="translate(182.771 257.265)" fill="#d0ced2" />
+                                <path id="Vector-8" data-name="Vector"
+                                    d="M4.318,0a17.349,17.349,0,0,1-.631,2.512,1.027,1.027,0,0,0-.019.136,6.386,6.386,0,0,1-1.51.192A6.438,6.438,0,0,1,.643,2.648a1.012,1.012,0,0,0-.012-.136A18.417,18.417,0,0,1,0,0,19.358,19.358,0,0,0,2.159.136,19.265,19.265,0,0,0,4.318,0Z"
+                                    transform="translate(177.265 262.771)" fill="#d0ced2" />
+                                <path id="Vector-9" data-name="Vector"
+                                    d="M4.8,4.8a18.584,18.584,0,0,1-4.656,0,18.584,18.584,0,0,1,0-4.656A18.584,18.584,0,0,1,4.8.146,18.584,18.584,0,0,1,4.8,4.8Z"
+                                    transform="translate(176.949 256.949)" fill="#d0ced2" />
+                                <path id="Vector-10" data-name="Vector" d="M0,0H14.848V14.848H0Z"
+                                    transform="translate(172 252)" fill="none" opacity="0" />
+                                <path id="Vector-11" data-name="Vector" d="M0,0H14.848V14.848H0Z"
+                                    transform="translate(186.848 266.848) rotate(180)" fill="none" opacity="0" />
+                            </g>
+                        </svg>
+                        کشورها
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="main-content-section">
+            <h2 class="main-title">آموزش</h2>
+            <div class="main-content ">
+                <div class="main-content-title d-flex justify-content-between align-items-center">
+                    <h3>آموزش راه اندازی اکانت در دیوایس های مختلف را در این قسمت ببینید</h3>
+                </div>
+
+
+                <div class="content ">
+                    <section class="text-center position-relative container main-section pt-4">
+                        <div class="step-title d-flex justify-content-start align-items-center">
+                            <span
+                                class="step-number d-flex justify-content-center align-items-center rounded-circle">1</span>
+
+                            <span class="step-desc">انتخاب دیوایس</span>
+                        </div>
+
+
+                        <ul class="device-type-tabs mx-auto   d-flex flex-column flex-md-row justify-content-start align-items-center nav-pills"
+                            id="pills-tab" role="tablist">
+                            <li class="device-type-tab d-flex justify-content-center align-items-center position-relative overflow-hidden "
+                                role="presentation">
+                                <button
+                                    class="border-0 d-flex justify-content-center align-items-center position-relative w-100 h-100 active"
+                                    id="pills-desktop-tab" data-bs-toggle="pill" data-bs-target="#pills-desktop"
+                                    type="button" role="tab" aria-controls="pills-desktop" aria-selected="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19.465" height="16.684"
+                                        viewBox="0 0 19.465 16.684">
+                                        <path id="Path_1219" data-name="Path 1219"
+                                            d="M2.89,3H19.574a1.39,1.39,0,0,1,1.39,1.39V15.513a1.39,1.39,0,0,1-1.39,1.39H13.652a2.382,2.382,0,0,0,1.047.927c.426.26.834.5.927.927a.927.927,0,0,1-.315.769.463.463,0,0,1-.371.158H7.525a.463.463,0,0,1-.324-.139.927.927,0,0,1-.324-.788c.056-.445.463-.686.927-.927A2.382,2.382,0,0,0,8.85,16.9H2.89a1.39,1.39,0,0,1-1.39-1.39V4.39A1.39,1.39,0,0,1,2.89,3ZM2.427,14.123H20.038V4.39a.463.463,0,0,0-.463-.463H2.89a.463.463,0,0,0-.463.463Z"
+                                            transform="translate(-1.5 -3)" fill="#fff" />
+                                    </svg>
+
+                                    دسکتاپ
+
+                                </button>
+                                <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                            </li>
+                            <li class="device-type-tab d-flex justify-content-center align-items-center position-relative overflow-hidden"
+                                role="presentation">
+                                <button
+                                    class="border-0 d-flex justify-content-center align-items-center position-relative w-100 h-100"
+                                    id="pills-mobile-tab" data-bs-toggle="pill" data-bs-target="#pills-mobile"
+                                    type="button" role="tab" aria-controls="pills-mobile" aria-selected="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11.676" height="18.567"
+                                        viewBox="0 0 11.676 18.567">
+                                        <path id="Path_1220" data-name="Path 1220"
+                                            d="M-.563,3h8.8A1.437,1.437,0,0,1,9.676,4.437V20.13a1.437,1.437,0,0,1-1.437,1.437h-8.8A1.437,1.437,0,0,1-2,20.13V4.437A1.437,1.437,0,0,1-.563,3Zm4.4,17.931A.936.936,0,1,0,2.9,20,.935.935,0,0,0,3.838,20.931ZM-1.1,17.885a.54.54,0,0,0,.539.539h8.8a.54.54,0,0,0,.539-.539V4.437A.54.54,0,0,0,8.239,3.9h-8.8a.54.54,0,0,0-.539.539Z"
+                                            transform="translate(2 -3)" fill="#332546" />
+                                    </svg>
+
+                                    موبایل و تبلت
+                                </button>
+                                <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                            </li>
+                            <li class="device-type-tab d-flex justify-content-center align-items-center position-relative overflow-hidden"
+                                role="presentation">
+                                <button
+                                    class="border-0 d-flex justify-content-center align-items-center position-relative w-100 h-100"
+                                    id="pills-modem-tab" data-bs-toggle="pill" data-bs-target="#pills-modem"
+                                    type="button" role="tab" aria-controls="pills-modem" aria-selected="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.504" height="13.348"
+                                        viewBox="0 0 20.504 13.348">
+                                        <path id="Union_91" data-name="Union 91"
+                                            d="M.917,13.348A.925.925,0,0,1,0,12.416V9.431A.924.924,0,0,1,.917,8.5H19.589a.926.926,0,0,1,.915.933v2.985a.925.925,0,0,1-.917.932Zm.9-2.467a.556.556,0,0,0,.541.565.537.537,0,0,0,.394-.161.559.559,0,0,0-.381-.957h0A.554.554,0,0,0,1.817,10.881Zm2.908,0a.549.549,0,1,0,.55-.556A.552.552,0,0,0,4.725,10.884Zm2.91,0a.554.554,0,0,0,.545.563h.01a.559.559,0,1,0-.556-.562ZM2.873,8.127l.07-2.685a.366.366,0,0,1,.332-.392h.833a.366.366,0,0,1,.332.392l.067,2.685ZM3.319.365A.366.366,0,0,1,3.688,0a.376.376,0,0,1,.266.107.359.359,0,0,1,.109.258L4.15,4.676H3.275l-.042.01Z"
+                                            fill="#332546" />
+                                    </svg>
+
+                                    مودم
+                                </button>
+                                <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                            </li>
+                        </ul>
+
+                        <div class="step-title d-flex justify-content-start align-items-center">
+                            <span
+                                class="step-number d-flex justify-content-center align-items-center rounded-circle">2</span>
+
+                            <span class="step-desc">انتخاب سیستم عامل</span>
+                        </div>
+
+
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-desktop" role="tabpanel"
+                                aria-labelledby="pills-desktop-tab">
+                                <ul class=" d-flex flex-column flex-md-row justify-content-start align-items-center mx-auto device-system-tabs"
+                                    id="" role="tablist">
+                                    <li class="position-relative overflow-hidden" role="presentation">
+                                        <button
+                                            class="border-0 d-flex w-100 h-100 position-relative justify-content-center align-items-center active"
+                                            id="pills-windows-tab" data-bs-toggle="pill" data-bs-target="#pills-windows"
+                                            type="button" role="tab" aria-controls="pills-windows" aria-selected="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16.827" height="16.826"
+                                                viewBox="0 0 16.827 16.826">
+                                                <path id="microsoft-svgrepo-com"
+                                                    d="M4,4h7.888v7.887H4Zm8.94,0h7.888v7.887H12.94ZM4,12.939h7.888v7.887H4Zm8.94,0h7.888v7.887H12.94Z"
+                                                    transform="translate(-4 -4)" fill="#332546" />
+                                            </svg>
+
+                                            ویندوز
+                                        </button>
+                                        <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                    </li>
+                                    <li class="position-relative overflow-hidden" role="presentation">
+                                        <button
+                                            class="border-0 d-flex w-100 h-100 position-relative justify-content-center align-items-center"
+                                            id="pills-mac-tab" data-bs-toggle="pill" data-bs-target="#pills-mac"
+                                            type="button" role="tab" aria-controls="pills-mac" aria-selected="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19.124" height="22.294"
+                                                viewBox="0 0 19.124 22.294">
+                                                <g id="_7935ec95c421cee6d86eb22ecd114eed"
+                                                    data-name="7935ec95c421cee6d86eb22ecd114eed"
+                                                    style="isolation: isolate">
+                                                    <path id="Path_1209" data-name="Path 1209"
+                                                        d="M46.081,5.865a4.542,4.542,0,0,1,1.113-3.529A5.269,5.269,0,0,1,50.6.5a4.881,4.881,0,0,1-1.083,3.62A4.449,4.449,0,0,1,46.081,5.865Zm7,4.7A4.758,4.758,0,0,1,55.314,7.98a5.675,5.675,0,0,0-4.275-2.261c-2.01,0-2.86.958-4.256.958-1.438,0-2.529-.958-4.27-.958a5.816,5.816,0,0,0-4.677,2.817,6.4,6.4,0,0,0-.867,2.382,12.782,12.782,0,0,0,2.15,8.819c.941,1.431,2.2,3.043,3.834,3.057,1.46.014,1.874-.933,3.85-.943s2.354.953,3.812.939c1.639-.014,2.963-1.8,3.9-3.228a16.151,16.151,0,0,0,1.445-2.706A4.955,4.955,0,0,1,53.079,10.562Z"
+                                                        transform="translate(-36.84 -0.5)" fill="#332546" />
+                                                </g>
+                                            </svg>
+
+                                            مکینتاش
+                                        </button>
+                                        <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                    </li>
+                                    <li class="position-relative overflow-hidden" role="presentation">
+                                        <button
+                                            class="border-0 d-flex w-100 h-100 position-relative justify-content-center align-items-center"
+                                            id="pills-linux-tab" data-bs-toggle="pill" data-bs-target="#pills-linux"
+                                            type="button" role="tab" aria-controls="pills-linux" aria-selected="false">
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16.148" height="18.907"
+                                                viewBox="0 0 16.148 18.907">
+                                                <g id="XMLID_91_" style="isolation: isolate">
+                                                    <path id="XMLID_92_"
+                                                        d="M37.9,15.181c-.554-.227-.792-.528-.769-.978a1.5,1.5,0,0,0-.416-1.061,4.6,4.6,0,0,0,0-2.436,21.033,21.033,0,0,0-2.592-4.228,3.63,3.63,0,0,1-.511-2.165,6.581,6.581,0,0,0-.485-2.636A2.726,2.726,0,0,0,30.539,0a3.55,3.55,0,0,0-1.972.6c-1.133.782-.983,2.486-.884,3.613.014.154.026.3.034.425A5.588,5.588,0,0,1,27.644,6.5a7.651,7.651,0,0,1-.565.793c-.274.36-.584.769-.838,1.149a9,9,0,0,0-.785,1.835,8.8,8.8,0,0,1-.5,1.243,1.692,1.692,0,0,0-.164,1.271,1.306,1.306,0,0,0-.419.53c-.168.36-.51.553-1.221.689a.942.942,0,0,0-.67.408,1.158,1.158,0,0,0,.007.925,1.439,1.439,0,0,1-.1,1.043c-.033.1-.07.212-.108.336a.606.606,0,0,0,.064.53c.268.41,1.052.555,1.858.65a7.164,7.164,0,0,1,1.518.436,7.128,7.128,0,0,0,1.485.429,1.688,1.688,0,0,0,.21.014,1.236,1.236,0,0,0,1.131-.664,12.566,12.566,0,0,1,2.038-.241,8.851,8.851,0,0,1,2.026.208,1.629,1.629,0,0,0,.61.665,1.481,1.481,0,0,0,.686.155h0a1.655,1.655,0,0,0,1.207-.5,10.812,10.812,0,0,1,2.188-1.4c.167-.091.324-.175.461-.252a1.032,1.032,0,0,0,.631-.916A.774.774,0,0,0,37.9,15.181ZM28.576,15.1c-.052-.369-.528-.736-1.078-1.16a3.813,3.813,0,0,1-1.1-1.073,3.236,3.236,0,0,1,.338-2.517,6.392,6.392,0,0,0,.514-1.24,4.458,4.458,0,0,1,.537-1.226,3.129,3.129,0,0,0,.643-1.561,1.948,1.948,0,0,0,1.15.625.678.678,0,0,0,.185-.025,6.211,6.211,0,0,0,1.1-.555,4.705,4.705,0,0,1,.936-.47,26.128,26.128,0,0,1,2.044,5.086,5.39,5.39,0,0,1-.076,1.94,1.427,1.427,0,0,0-.191-.014c-.447,0-.565.244-.6.389a15.767,15.767,0,0,0-.088,1.86A3.7,3.7,0,0,1,30.742,16.5a9.315,9.315,0,0,1-1.326.1,4.48,4.48,0,0,1-.654-.04l-.589-.674A.716.716,0,0,0,28.576,15.1Zm.748-11.12L29.27,4a1.1,1.1,0,0,0-.012-.121.687.687,0,0,0-.584-.639.413.413,0,0,0-.063,0,.489.489,0,0,0-.361.323c.061-.381.277-.663.533-.663.3,0,.555.405.555.885A1.308,1.308,0,0,1,29.324,3.977Zm2.336.286a.939.939,0,0,0,.042-.281.706.706,0,0,0-.628-.775.713.713,0,0,0-.624.775q0,.044,0,.087l-.053-.02a1.185,1.185,0,0,1-.06-.373.762.762,0,1,1,1.482,0A1.11,1.11,0,0,1,31.66,4.262Zm-.3,1.012c-.006.026-.018.038-.157.11-.07.036-.157.082-.266.148l-.073.044a6.741,6.741,0,0,1-1.163.617c-.126.017-.2-.032-.38-.151-.04-.027-.082-.056-.127-.084a1.489,1.489,0,0,1-.543-.526c.1-.08.359-.279.49-.4a1.416,1.416,0,0,1,.666-.413l.02,0a6.626,6.626,0,0,1,.82.292c.13.052.241.1.32.125A.767.767,0,0,1,31.359,5.274Zm2.228,11.553a9.18,9.18,0,0,0,.275-2c-.006-.115-.016-.24-.026-.361a3.321,3.321,0,0,1-.018-.662l.019-.007a1.124,1.124,0,0,0,.526,1.068,1.163,1.163,0,0,0,.467.09,1.908,1.908,0,0,0,1.186-.437,2.157,2.157,0,0,0,.3-.4.477.477,0,0,1,.021.186,1.334,1.334,0,0,0,.575,1.2l.057.03c.141.074.514.27.52.363a.083.083,0,0,1-.024.03,5.39,5.39,0,0,1-.741.416,6.478,6.478,0,0,0-1.493.918,2.039,2.039,0,0,1-1.139.712A.3.3,0,0,1,34,17.972C33.7,17.878,33.455,17.445,33.587,16.827Zm-10.236-1.61a.841.841,0,0,1-.029-.366c.019-.081.42-.168.591-.205a2.3,2.3,0,0,0,.652-.205,1.323,1.323,0,0,0,.444-.6.926.926,0,0,1,.248-.372.053.053,0,0,1,.029-.007c.175,0,.543.368.755.7.054.083.153.25.268.443a14.148,14.148,0,0,0,1.063,1.63c.222.238.581.7.493,1.087a1.191,1.191,0,0,1-.491.607.5.5,0,0,1-.109.01,6.971,6.971,0,0,1-1.906-.6l-.074-.031a6.043,6.043,0,0,0-1.179-.263,3.852,3.852,0,0,1-.913-.205c-.065-.073.01-.309.077-.517a3.351,3.351,0,0,0,.124-.466A1.7,1.7,0,0,0,23.352,15.217Z"
+                                                        transform="translate(-22.257 0)" fill="#6103dc" />
+                                                </g>
+                                            </svg>
+
+                                            لینوکس
+                                        </button>
+                                        <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                    </li>
+                                </ul>
+                                <div class="step-title d-flex justify-content-start align-items-center">
+                                    <span
+                                        class="step-number d-flex justify-content-center align-items-center rounded-circle">3</span>
+        
+                                    <span class="step-desc">انتخاب نرم افزار</span>
+                                </div>
+                                <div class="tab-content ">
+                                    <div class="tab-pane fade show active" id="pills-windows" role="tabpanel"
+                                        aria-labelledby="pills-windows-tab">
+                                       
+
+                                        <ul class="desc-contents d-flex flex-column flex-md-row justify-content-start align-items-center" id="pills-tab" role="tablist">
+                                            <li class="desc-content position-relative overflow-hidden" role="presentation">
+                                              <button class="position-relative w-100 h-100 border-0 active d-flex justify-content-start align-items-center gap-12 ps-3" id="desc-1-tab" data-bs-toggle="pill" data-bs-target="#desc-1" type="button" role="tab" aria-controls="desc-1" aria-selected="true">
+                                                <div class="img-container rounded-circle d-flex justify-content-center align-items-center">
+                                                    <img src="./assets/image/vpn-img.png" class="w-100" alt="">
+                                                </div>
+                                              آموزش وی پی ان
+                                              </button>
+                                              <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                            </li>
+                                            <li class="desc-content position-relative overflow-hidden" role="presentation">
+                                              <button class="position-relative w-100 h-100 border-0 d-flex justify-content-start align-items-center gap-12 ps-3" id="desc-2-tab" data-bs-toggle="pill" data-bs-target="#desc-2" type="button" role="tab" aria-controls="desc-2" aria-selected="false">
+                                                <div class="img-container rounded-circle d-flex justify-content-center align-items-center">
+                                                    <img src="./assets/image/cisco-anyconnect.png" class="w-100" alt="">
+                                                </div>
+                                                آموزش سیسکو
+                                              </button>
+                                              <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                            </li>
+                                            <li class="desc-content position-relative overflow-hidden" role="presentation">
+                                              <button class="position-relative w-100 h-100 border-0 d-flex justify-content-start align-items-center gap-12 ps-3" id="desc-3-tab" data-bs-toggle="pill" data-bs-target="#desc-3" type="button" role="tab" aria-controls="desc-3" aria-selected="false">
+                                                <div class="img-container rounded-circle d-flex justify-content-center align-items-center">
+                                                    <img src="./assets/image/OpenVPN-Server-License-100.png" class="w-100" alt="">
+                                                </div>
+                                                آموزش اپن وی پی ان
+                                              </button>
+                                              <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                            </li>
+                                            <li class="desc-content position-relative overflow-hidden" role="presentation">
+                                              <button class="position-relative w-100 h-100 border-0 d-flex justify-content-start align-items-center gap-12 ps-3" id="desc-4-tab" data-bs-toggle="pill" data-bs-target="#desc-4" type="button" role="tab" aria-controls="desc-4" aria-selected="false">
+                                                <div class="img-container rounded-circle d-flex justify-content-center align-items-center">
+                                                    <img src="./assets/image/shield.png" class="w-100" alt="">
+                                                </div>
+                                                آموزش کریو
+                                              </button>
+                                              <span class="active-mask position-absolute start-0 w-100 h-100"></span>
+                                            </li>
+                                            
+                                          </ul>
+
+                                          <div class="tab-content-pane tab-content" id="des-pane">
+                                            <div class="tab-pane fade show active" id="desc-1" role="tabpanel" aria-labelledby="desc-1-tab" tabindex="0">
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز
+                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده است</p>
+                                                    <div class="video-container d-flex justify-content-center align-items-center">
+                                                        <svg id="video-circle" xmlns="http://www.w3.org/2000/svg" width="31.541" height="31.541" viewBox="0 0 31.541 31.541">
+                                                            <path id="Vector" d="M3.18,11.485a3.03,3.03,0,0,1-1.524-.394A3.735,3.735,0,0,1,0,7.687V3.8A3.75,3.75,0,0,1,1.656.394,3.724,3.724,0,0,1,5.428.669L8.805,2.615a3.748,3.748,0,0,1,2.116,3.128A3.748,3.748,0,0,1,8.805,8.87L5.428,10.815A4.5,4.5,0,0,1,3.18,11.485Zm.013-9.515a.994.994,0,0,0-.539.131,1.908,1.908,0,0,0-.67,1.7v3.89a1.876,1.876,0,0,0,.67,1.7,1.866,1.866,0,0,0,1.8-.276L7.833,7.162c.723-.421,1.13-.933,1.13-1.419S8.555,4.73,7.833,4.323L4.455,2.378A2.6,2.6,0,0,0,3.193,1.971Z" transform="translate(10.96 10.028)" fill="#d0ced2"/>
+                                                            <path id="Vector-2" data-name="Vector" d="M14.128,28.255A14.128,14.128,0,1,1,28.255,14.128,14.139,14.139,0,0,1,14.128,28.255Zm0-26.284A12.156,12.156,0,1,0,26.284,14.128,12.171,12.171,0,0,0,14.128,1.971Z" transform="translate(1.643 1.643)" fill="#d0ced2"/>
+                                                            <path id="Vector-3" data-name="Vector" d="M0,0H31.541V31.541H0Z" fill="none" opacity="0"/>
+                                                          </svg>
+                                                          
+                                                    </div>
+                                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز
+                                                        کاربردهای متنوع با هدف بهبود ابزارهای کاربردی باشد</p>
+                                                        <p>تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+                                                            شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی
+                                                            بهبود ابزارهای کاربردی می باشد</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="desc-2" role="tabpanel" aria-labelledby="desc-2-tab" tabindex="0">...</div>
+                                            <div class="tab-pane fade" id="desc-3" role="tabpanel" aria-labelledby="desc-3-tab" tabindex="0">...</div>
+                                            <div class="tab-pane fade" id="desc-4" role="tabpanel" aria-labelledby="desc-4-tab" tabindex="0">...</div>
+                                          </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-mac" role="tabpanel"
+                                        aria-labelledby="pills-mac-tab">
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-linux" role="tabpanel"
+                                        aria-labelledby="pills-linux-tab">
+                                        
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-mobile" role="tabpanel"
+                                aria-labelledby="pills-mobile-tab">
+                                
+                            </div>
+                            <div class="tab-pane fade" id="pills-modem" role="tabpanel"
+                                aria-labelledby="pills-modem-tab">
+                                
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/lib/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        let tooltipIcon = document.querySelectorAll('.tooltip-icon')
+        tooltipIcon.forEach(icn => {
+
+            if (icn.querySelector('.tooltip-content.tooltip-card span')) {
+                icn.querySelector('.tooltip-content.tooltip-card span.triangle').style.right = icn.parentElement.getBoundingClientRect().right - icn.getBoundingClientRect().right + 16 + 'px'
+            }
+            if (icn.querySelector('.tooltip-content.tooltip-countries span')) {
+                icn.querySelector('.tooltip-content.tooltip-countries span.triangle').style.right = icn.parentElement.getBoundingClientRect().right - icn.getBoundingClientRect().right + 25 + 'px'
+            }
+        })
+    </script>
+
+
+    <script>
+        let windowURL = window.location.href
+
+        let links = document.querySelectorAll('.dashboard-ul a')
+        links.forEach(link => {
+            link.classList.remove('active')
+            if (windowURL.includes(link.getAttribute('href'))) {
+                link.classList.add('active')
+            }
+        })
+    </script>
+
+</body>
+
+</html>

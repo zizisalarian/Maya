@@ -1,0 +1,115 @@
+.step-title {
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 500;
+
+    .step-number {
+        width: 21px;
+        height: 21px;
+        background: linear-gradient(90deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
+        color: var(--light-color);
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .step-name {
+
+        color: var(--second-color)
+    }
+}
+
+
+.device-type-tabs,
+.device-system-tabs,
+.desc-contents {
+    padding-bottom: 20px;
+    margin: 25px 0;
+    gap: 20px
+}
+
+.device-system-tabs li,
+.device-type-tab,
+.desc-content {
+    border-radius: 8px;
+    width: 238px;
+    height: 50px;
+    background-color: #F6F3F9;
+
+    svg path {
+        fill: var(--main-color);
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 13px;
+        z-index: 1;
+        gap: 13px;
+        background-color: transparent;
+
+        .img-container {
+            width: 28px;
+            height: 28px;
+            background-color: var(--light-color);
+        }
+
+    }
+
+    .active-mask {
+        background: linear-gradient(180deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
+        top: 100%;
+        transition: 0.5s;
+        z-index: 0;
+    }
+
+    &:has(.active) {
+        .active-mask {
+            transition: 0.5s;
+            top: 0;
+        }
+
+        button {
+            color: var(--light-color);
+
+            svg path {
+                fill: var(--light-color);
+            }
+        }
+    }
+
+}
+
+.desc-contents {
+    border-bottom: 1px solid #F2EBFF
+}
+
+.tab-content-pane {
+    .video-container {
+        border-radius: 15px;
+        margin: 30px auto;
+        width: 412px;
+        max-width: 100%;
+        aspect-ratio: 1.4;
+        height: auto;
+        background-color: #F4F1F8;
+    }
+
+    p {
+        font-size: 12px;
+        text-align: right;
+        margin: 30px 0;
+    }
+
+    >div>*:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .device-system-tabs li,
+    .device-type-tab,
+    .desc-content {
+        width: 100%;
+    }
+}
