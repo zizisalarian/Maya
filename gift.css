@@ -1,0 +1,121 @@
+.information {
+    margin-top: 25px;
+
+    >div {
+        /* flex: 1 0 0; */
+        width: 234px;
+    }
+
+    label {
+        font-size: 11px;
+        padding: 10px 20px;
+        padding-top: 0;
+    }
+
+    button {
+        background: linear-gradient(90deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
+        border: 0;
+        color: var(--light-color)
+    }
+
+    .submit label {
+        visibility: hidden;
+    }
+}
+
+.search-box {
+    width: 234px;
+    border: 1px solid #E2E0E4;
+    border-radius: 7px;
+    height: 30px;
+    background-color: var(--light-color);
+
+    input {
+        height: 100%;
+        width: 100%;
+        padding: 2px;
+        padding-right: 22px;
+    }
+
+    button {
+        left: 16px;
+        flex-shrink: 0;
+        min-width: fit-content;
+    }
+}
+
+.data-title-row {
+    margin-top: 20px;
+    margin-bottom: 11px;
+    background-color: #F6F3F9;
+    border-radius: 5px;
+    height: 30px;
+
+    >div {
+        flex: 1 0 0;
+        font-size: 9px;
+        text-align: right;
+        padding-right: 18px;
+    }
+}
+
+.data-content-row {
+
+    /* margin-top: 20px; */
+    /* background-color: #F6F3F9; */
+    /* border-radius: 5px; */
+    /* height: 30px; */
+    >div {
+        flex: 1 0 0;
+        font-size: 12px;
+        text-align: right;
+        padding-bottom: 14px;
+        padding-right: 18px;
+
+
+    }
+}
+
+.table-form-sm {
+    >div {
+        margin-top: 20px;
+    }
+
+    .name {
+        height: 40px;
+        background-color: #F6F3F9;
+        border-radius: 5px;
+        padding-right: 15px;
+        font-size: 12px;
+    }
+
+    .form-row {
+        padding: 17px 15px 0;
+        
+        .title{
+            font-size: 9px;
+        }
+        .value{
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .information>div {
+        width: 100%
+    }
+
+    .search-box {
+        width: 30px;
+
+        input {
+            display: none;
+        }
+
+        button {
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+        }
+    }
+}
