@@ -437,6 +437,7 @@ nav {
         .main-content-title {
             padding-bottom: 20px;
             border-bottom: 1px solid #F2EBFF;
+            font-size: 13px;
 
             h3 {
                 font-size: 13px;
@@ -606,10 +607,10 @@ nav {
             }
         }
     }
-
+/* 
     body>section {
         padding-top: 28px;
-    }
+    } */
 
     .main-card {
         width: 100%
@@ -639,4 +640,8 @@ nav {
             }
         }
     }
+    .main-content-section {
+        .main-content{
+            padding: 20px
+        }}
 }

@@ -1,0 +1,124 @@
+.step-title{
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 500;
+    .step-number{
+        width: 21px;
+        height: 21px;
+        background: linear-gradient(90deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
+        color: var(--light-color);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .step-name{
+       
+        color: var(--second-color)
+    }
+    .step-desc{
+
+    }
+}
+
+
+.information {
+    margin-top: 25px;
+    >div {
+        flex: 1 0 0;
+    }
+    
+    label {
+        font-size: 11px;
+        padding: 10px 20px;
+        padding-top: 0;
+    }
+    
+    button{
+        background: linear-gradient(90deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
+        border: 0;
+        color: var(--light-color)
+    }
+    .submit label{
+        visibility: hidden;
+    }
+}
+.gap-25{
+    gap:25px
+}
+.devices {
+    margin-top: 25px;
+    >div{
+        flex: 1 0 0 ;
+        background-color: #F6F3F9;
+        padding: 12px;
+        height: 78px;
+        .img-container{
+            border-radius: 5px;
+            height: 100%;
+            width: auto;
+            aspect-ratio: 1;
+            background: linear-gradient(180deg, rgba(64, 52, 88, 1) 0%, rgba(51, 37, 70, 1) 100%);
+            box-shadow: 0 5px 20px rgba(51, 37 , 70 , 0.3);
+            .active-dot{
+                width: 7px;
+                height: 7px;
+                background-color: #4BEF9D;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        }
+        h6 , p{
+            font-size: 11px;
+            text-align: right;
+        }
+
+
+    }
+}
+.delete-device{
+    border: none;
+    left: 30px;
+    width: 17px;
+    height: 17px;
+    background-color: #FF4B5E;
+    box-shadow: 0 5px 10px rgba(255 , 0 , 0 , 0.25);
+    
+}
+
+
+@media (max-width: 768px){
+    .devices {
+        gap: 15px !important;
+        margin-top: 20px;
+        >div{
+            width: 100%;
+            flex:  1 1 auto ;
+            }
+    }
+    .information .submit{
+        label{
+            display: none;
+
+        }
+        button{
+            height: 40px
+        }
+
+    }
+}
+
+
+.modal {
+    .modal-content{
+        padding:0 25px;
+    }
+    .modal-header{
+        padding: 15px 0;
+        h5{
+            font-size: 13px;
+        }
+    }
+    .modal-body{
+        padding: 15px 0
+    }
+}
