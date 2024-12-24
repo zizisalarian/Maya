@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accordion Box</title>
+  <title>Custom Gauge</title>
   <style>
     * {
       margin: 0;
@@ -12,103 +12,86 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-color: #f5f5f5;
+      height: 100vh;
+      background-color: #3e2d59; /* رنگ پس‌زمینه */
+      font-family: Arial, sans-serif;
     }
 
-    .accordion-container {
-      width: 90%;
-      max-width: 500px;
+    .gauge-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
     }
 
-    .accordion-item {
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
+    /* دایره پس‌زمینه با سایه */
+    .gauge {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(0, 255, 133, 0.15), transparent 70%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .accordion-header {
-      background: #5a5afc;
-      color: #fff;
-      padding: 15px;
-      cursor: pointer;
-      font-size: 1.2rem;
+    /* نمودار پر شده */
+    .gauge .fill {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
+      background: conic-gradient(
+        #00ff85 0% 60%,  /* رنگ سبز نمودار */
+        transparent 60% 100% /* خالی کردن باقی */
+      );
+    }
+
+    /* ایجاد دایره داخلی برای توخالی کردن مرکز */
+    .gauge .center {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background-color: #3e2d59;
+      border-radius: 50%;
+    }
+
+    /* متن نمایش مقدار */
+    .gauge .value {
+      position: absolute;
+      font-size: 1.5rem;
       font-weight: bold;
-      transition: background 0.3s;
+      color: #00ff85;
     }
 
-    .accordion-header:hover {
-      background: #3a3ad1;
-    }
-
-    .accordion-content {
-      max-height: 0; /* پیش‌فرض ارتفاع 0 */
-      overflow: hidden;
-      transition: max-height 0.4s ease; /* انیمیشن باز و بسته شدن */
-      padding: 0 15px; /* فاصله داخلی */
-    }
-
-    .accordion-content.open {
-      padding: 15px; /* فاصله داخلی هنگام باز شدن */
+    /* برچسب متن */
+    .gauge .label {
+      position: absolute;
+      bottom: -25px;
+      font-size: 1rem;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <div class="accordion-container">
-    <div class="accordion-item">
-      <div class="accordion-header">عنوان 1</div>
-      <div class="accordion-content">
-        <p>
-          این یک متن نمونه است که در داخل بخش آکاردئون قرار گرفته است.
-          می‌توانید متن‌های مختلفی در اینجا قرار دهید و ارتفاع به صورت خودکار
-          تنظیم می‌شود.
-        </p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">عنوان 2</div>
-      <div class="accordion-content">
-        <p>
-          بخش دوم از آکاردئون با محتوای متفاوت.
-          اینجا می‌توانید متن بیشتری اضافه کنید و همچنان انیمیشن حفظ می‌شود.
-        </p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">عنوان 3</div>
-      <div class="accordion-content">
-        <p>بخش سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر سوم از آکاردئون. این یک مثال دیگر است.</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const isOpen = content.classList.contains('open');
-
-        // بستن همه آکاردئون‌های دیگر
-        document.querySelectorAll('.accordion-content.open').forEach(openContent => {
-          openContent.style.maxHeight = null;
-          openContent.classList.remove('open');
-        });
-
-        // باز یا بسته کردن آکاردئون کلیک شده
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          content.classList.add('open');
-        } else {
-          content.style.maxHeight = null;
-          content.classList.remove('open');
-        }
-      });
-    });
-  </script>
+  <svg
+  width="200"
+  height="200"
+  viewBox="-100 -100 200 200"
+>
+  <path
+    d="
+      M -30 20
+      A 50 50 0 1 1 30 20"
+    fill="#ffffff00"
+    stroke="#ffffff22"
+    stroke-width="10"
+    stroke-linejoin="round"
+  />
+</svg>
 </body>
 </html>
