@@ -1,0 +1,59 @@
+.section-content {
+    margin-top: 20px;
+    p {
+        font-size: 12px;
+        text-align: right;
+        line-height: 23px;
+        svg{
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+    }
+    button{
+        margin-top: 24px;
+        height: 40px;
+        width: 280px;
+        padding: 0 20px;
+        color: var(--light-color);
+        font-size: 11px
+    }
+}
+.section-content.server{
+    gap: 20px
+}
+.server-code{
+    height: 40px;
+    width: 100%;
+    padding:0 20px;
+    background-color: #F6F3F9;
+    font-size: 11px;
+
+}
+.copy-button{
+    width: 88px;
+    height: 40px;
+    color: var(--light-color);
+    font-size: 11px;
+}
+
+@media (max-width: 768px){
+    .section-content {
+        margin-top: 20px;
+        p {
+            font-size: 12px;
+        }
+        button{
+            margin-top: 24px;
+            height: 40px;
+            width: 100%;
+            padding: 0 20px;
+            color: var(--light-color);
+            font-size: 11px
+        }
+    }
+    .server-code{
+        height: fit-content;
+        padding: 10px 18px;
+        text-align: left;
+    }
+}
