@@ -1515,17 +1515,17 @@
             }
         }
     </script>
-    <script>
-        let windowURL = window.location.href
+   <script>
+    let windowURL = window.location.href
 
-        let links = document.querySelectorAll('.menu-container a')
-        links.forEach(link => {
-            link.classList.remove('active')
-            if (windowURL.includes(link.getAttribute('href'))) {
-                link.classList.add('active')
-            }
-        })
-    </script>
+    let links = document.querySelectorAll('.dashboard-ul a')
+    links.forEach(link => {
+        link.classList.remove('active')
+        if (windowURL.includes(link.getAttribute('href'))) {
+            link.classList.add('active')
+        }
+    })
+</script>
 
     <script>
         let otpInputs = document.querySelectorAll('.otpInput')

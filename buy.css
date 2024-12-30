@@ -2,13 +2,14 @@
     gap: 9px;
     font-size: 13px;
     font-weight: 500;
+    font-weight: 600;
     .step-number{
         width: 21px;
         height: 21px;
         background: linear-gradient(90deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
         color: var(--light-color);
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .step-name{
        
@@ -40,30 +41,20 @@
             background-color: #F6F3F9;
             width: 88px;
             height: 50px;
-
             z-index: 0;
             button{
                 background-color: transparent;
                 width: 100%;
                 height: 100%;
                 z-index: 1;
-            }
-            .tab-mask{
-                background: linear-gradient(180deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
-                z-index: 0;
-                top: 100%;
-                transition: 0.5s;
+                /* transition: 0.5s; */
             }
             
-            &:has(button.active){
+            button.active{
+                background: linear-gradient(180deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
                 box-shadow: 0 5px 20px rgba(97,3,220,0.2);
-                button{
-                    color: var(--light-color);
-                }
-                .tab-mask{
-                    transition: 0.5s;
-                    top:0
-                }
+                color: var(--light-color);
+               
             }
         }
     }

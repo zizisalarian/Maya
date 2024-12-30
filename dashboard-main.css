@@ -1,5 +1,6 @@
 :root {
-    --main-font: IranSans;
+    /* --main-font: IranSans; */
+    --main-font: 'iransansxv';
     --main-color: #332546;
     --active-color: #7E37ED;
     --second-color: #6103DC;
@@ -14,6 +15,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
 }
 
 .h1,

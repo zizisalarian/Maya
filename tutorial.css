@@ -8,6 +8,7 @@
 
     >li {
         flex-grow: 1;
+        position: relative;
     }
 
     button {
@@ -24,6 +25,24 @@
         svg path {
             fill: var(--main-color);
         }
+
+    }
+
+    li:nth-child(2)::after , li:nth-child(2)::before{
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 22px;
+        background-color: #E0DCE6;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);    
+    }
+
+    li:nth-child(2)::before{
+        left: auto;
+        right: 0;   
     }
 
     button.active {
@@ -53,6 +72,10 @@
         }
     }
 
+    li:nth-child(2):has(.active)::before , 
+    li:nth-child(2):has(.active)::after{
+        display: none;
+    }
 
 }
 

@@ -52,24 +52,12 @@
             background-color: var(--light-color);
         }
 
-    }
-
-    .active-mask {
-        background: linear-gradient(180deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
-        top: 100%;
-        transition: 0.5s;
-        z-index: 0;
-    }
-
-    &:has(.active) {
-        .active-mask {
-            transition: 0.5s;
-            top: 0;
-        }
-
-        button {
+        
+        
+        &.active {
+            background: linear-gradient(180deg, rgba(158, 110, 255, 1) 0%, rgba(97, 3, 220, 1) 100%);
             color: var(--light-color);
-
+            
             svg path {
                 fill: var(--light-color);
             }
