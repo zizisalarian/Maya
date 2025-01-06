@@ -54,7 +54,7 @@
                                 </label>
                             </li>
                             <li>
-                                <a href="/tutorial.html"
+                                <a href="/"
                                     class="active fw-bold-c fs-12 d-flex justify-content-start align-items-center gap-12">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15.196" height="15.196"
                                         viewBox="0 0 15.196 15.196">
@@ -177,7 +177,8 @@
                         </ul>
                     </div>
                     <div class="userinfo-container d-flex justify-content-end align-items-center">
-                        <span class="toggler d-flex d-md-none justify-content-center align-items-center">
+                        <span class="toggler d-flex d-md-none justify-content-center align-items-center" data-bs-toggle="modal"
+                        data-bs-target="#login">
                             <svg id="frame" xmlns="http://www.w3.org/2000/svg" width="17.819" height="17.819"
                                 viewBox="0 0 17.819 17.819">
                                 <path id="Vector"
@@ -1716,14 +1717,20 @@
             }
         }
     </script>
-    <script>
+     <script>
         let windowURL = window.location.href
 
         let links = document.querySelectorAll('.menu-container a')
         links.forEach(link => {
             link.classList.remove('active')
-            if (windowURL.includes(link.getAttribute('href'))) {
-                link.classList.add('active')
+            if (link.getAttribute('href') == '/') {
+                links[0].classList.add('active')
+            } else {
+                if (windowURL.includes(link.getAttribute('href'))) {
+                    
+                    link.classList.add('active')
+                    links[0].classList.remove('active')
+                }
             }
         })
     </script>
@@ -1765,6 +1772,20 @@
                 }
             })
         })
+    </script>
+    <script>
+        
+        const elementsToIgnore = [document.querySelector('.menu-container'), document.querySelector('.toggler')];
+
+        document.body.addEventListener('click', (event) => {
+            if(document.getElementById('menu-toggler').checked == true){
+
+                const isClickOutside = !elementsToIgnore.some(el => el.contains(event.target));
+                if (isClickOutside) {
+                    document.querySelector('.toggler').click()
+                }
+            }
+        });
     </script>
 </body>
 

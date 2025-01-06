@@ -131,7 +131,7 @@ p {
 
 .button-main-light {
     color: var(--second-color);
-
+    font-weight: 600;
     min-width: 60px;
     border-radius: 5px;
     background-color: #F4F1F8;
@@ -275,6 +275,7 @@ nav {
 .section-title-c .title-content{
    min-width: fit-content;
    flex-shrink: 0;
+   font-weight: 600;
 }
 
 .section-title-c .line-1 {
@@ -579,7 +580,7 @@ nav {
 
 .invoice-pay {
     >* {
-        font-size: 11px;
+        font-size:13px;
         height: 40px;
         max-width: 300px;
         background-color: #F6F3F9;
