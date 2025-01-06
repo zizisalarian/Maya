@@ -650,3 +650,146 @@ nav {
             padding: 20px
         }}
 }
+
+
+
+.modal {
+    .modal-dialog {
+        max-width: 412px;
+    }
+
+    .modal-content {
+        min-height: 554px;
+        padding: 24px 20px;
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    label {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .input-container {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #F6F3F9;
+        margin-bottom: 20px;
+
+        input {
+            font-size: 12px;
+        }
+
+        .check {
+            left: 15px;
+
+            svg {
+                display: none
+            }
+
+            .false {
+                display: block
+            }
+        }
+
+        &:has(button) {
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(97, 3, 220, 0.2);
+        }
+
+        button {
+            color: var(--light-color);
+        }
+    }
+
+    p {
+        font-size: 12px;
+
+        span {
+            color: var(--second-color) !important
+        }
+    }
+
+    .modal-footer-c a {
+        color: var(--light-color);
+    }
+
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.otp-code {
+    direction: ltr;
+
+    >* {
+        flex: 1 0 0;
+    }
+
+    input {
+        height: 50px;
+        border-radius: 10px;
+        background-color: #F6F3F9;
+        width: 30px;
+        border: none;
+        display: flex;
+        text-align: center;
+        padding: 10px;
+
+        &:focus {
+            outline: none;
+            border: 1px solid var(--second-color)
+        }
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        display: none
+    }
+}
+
+.submit-btn {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.submit-btn.active {
+    opacity: 01;
+    pointer-events: all;
+}
+
+.check-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid var(--second-color);
+
+}
+
+#enter-new-pass .modal-body {
+    height: 300px !important;
+
+    h4 {
+        font-size: 16px;
+        margin-top: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal {
+        .modal-dialog {
+            min-height: 554px;
+            max-width: 100%;
+        }
+    }
+
+    #enter-new-pass .modal-body {
+        p {
+            font-size: 8px;
+        }
+    }
+}
