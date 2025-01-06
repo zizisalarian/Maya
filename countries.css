@@ -130,6 +130,9 @@
 
 
 @media (max-width: 768px){
+    .map-img{
+        display: none
+    }
     .cards {
         span{
             display: inline-block;
@@ -181,3 +184,44 @@
         }
     }
 }
+.map-img{
+    position: relative;
+    .marker{
+        width: 10px;
+        height: 10px;
+        background-color: #00ff99; 
+        border-radius: 50%;
+        box-shadow: 0 0 10px 2px #00ff99;
+        animation: blink 1.5s infinite;
+        position: absolute;
+        display: inline-block;
+    }
+}
+/* .map-img{
+    width: 100%;
+    aspect-ratio: 2;
+}
+#map{
+width: 100%;
+height: 100% ;
+}
+
+.custom-marker {
+    width: 10px;
+    height: 10px;
+    background-color: #00ff99; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #00ff99;
+    animation: blink 1.5s infinite;
+  }*/
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 10px 2px #00ff99;
+    }
+    50% {
+      opacity: 0.3;
+      box-shadow: 0 0 20px 4px #00ff99;
+    }
+  } 
