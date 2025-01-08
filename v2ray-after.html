@@ -1547,6 +1547,7 @@
     </script>
     <script>
         let windowURL = window.location.href
+        document.querySelectorAll('.menu-container a')[0].classList.remove('active')
 
         let links = document.querySelectorAll('.menu-container a')
         links.forEach(link => {

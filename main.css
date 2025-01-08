@@ -266,6 +266,7 @@ nav {
 .section-title {
     color: var(--main-color);
     margin-top: 10px;
+    font-weight: 600;
 
 }
 

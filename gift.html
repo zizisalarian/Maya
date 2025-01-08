@@ -682,7 +682,7 @@
                         <div class="section-content ">
 
                             <form
-                                class="w-100  d-flex flex-column flex-md-row justify-content-start align-items-start gap-4 information flex-column flex-wrap flex-md-nowrap flex-md-row">
+                                class="w-100  d-flex flex-column flex-md-row justify-content-start align-items-end   gap-4 information flex-column flex-wrap flex-md-nowrap flex-md-row">
                                 <div class="">
                                     <label class="text-start w-100" for="password">کد هدیه</label>
                                     <input class="input-custom" type="password" name="" id="password">
@@ -1638,6 +1638,7 @@
 
     <script>
         let windowURL = window.location.href
+        document.querySelectorAll('.menu-container a')[0].classList.remove('active')
 
         let links = document.querySelectorAll('.dashboard-ul a')
         links.forEach(link => {
